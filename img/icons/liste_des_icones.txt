@@ -1,0 +1,24 @@
+Icone position (Maquette: Paris, Belleville).
+<i class="fas fa-map-marker-alt"></i>
+
+Icone Smartphone (Maquette: Choisissez un restaurant)..
+<i class="fas fa-mobile-alt"></i>
+
+Icone menu (maquette: Composez votre menu).
+<i class="fas fa-bars"></i>
+<i class="fas fa-ellipsis-v"></i>
+
+Icone restaurant (Maquette: Dégustez au restaurant).
+<i class="fas fa-store"></i>
+
+Icone Like.
+<i class="far fa-heart"></i>
+
+Icone Pointé du doigt.
+<i class="far fa-hand-pointer"></i>
+
+Icone Couverts.
+<i class="fas fa-utensils"></i>
+
+Icone Serrer une main.
+<i class="fas fa-hands-helping"></i>

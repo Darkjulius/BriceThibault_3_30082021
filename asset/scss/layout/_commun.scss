@@ -1,0 +1,184 @@
+*{
+    @include dim-pages (border-box, 0px, 0px);
+}
+body{
+    font-family: $policy-text;
+}
+
+//FOOTER de toutes les pages
+.footer{
+    @media screen and (min-width: 375px){
+     background-color: $color3;
+     color: $color4;
+        .footer-infos{
+            padding: $dimension-padding;
+        }
+        .footer-title{
+            font-family: $policy;
+            font-weight: normal;
+            padding: 27px 0;
+        }
+        .footer-menu li{
+            list-style: none;
+            padding-bottom: 7px;
+        }
+        .footer-menu li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .footer-infos-icon-design{
+            margin-right: 15px;
+            display: inline-block;
+            width: 1px;
+            & i{
+                font-size: 11px;
+            }
+        }
+    }
+}
+.footer{
+    @media screen and (min-width: 560px){
+        .footer-title{
+            text-align: $align;
+        }
+        .footer-menu{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+        .footer-menu li{
+            padding-bottom: 0px;
+        }
+        .liste-1, .liste-2, .liste-3, .liste-4{
+            display: $display;
+            justify-content: $content;
+            line-height: 2em;
+        }
+    }
+}
+.footer{
+    @media screen and (min-width: 800px){
+        .footer-title{
+            text-align: $align;
+        }
+        .footer-menu{
+            display: $display;
+            justify-content: space-around;
+        }
+    }
+}
+// Header des pages menus
+.header{
+    @media screen and (min-width: 375px){
+        @include flexible($display,$direction,$content,$align);
+        padding: 23px 0;
+        font-family: $policy;
+        .header-icon{
+            position: absolute;
+            left: 5%;
+        }
+        .header-logo{
+            font-size: 2em;
+        }
+    }
+ }
+
+ //Image de la carte du menu
+ .menu-image{
+     @media screen and (min-width: 375px){
+         img{
+             width: 100%;
+         }
+     }
+ }
+
+ .card{
+     @media screen and (min-width: 375px){
+         position: relative;
+         z-index: 1;
+         bottom: 50px;
+         background-color: #fff;
+         border-top-left-radius: 20px;
+         border-top-right-radius: 20px;
+
+         .card-title-icon{
+            margin-left: 14px;
+            margin-right: 14px;
+            padding-top: 35px;
+            font-family: $policy;
+            padding-bottom: 36px;
+            display: flex;
+         }
+
+         .card-icon{
+             font-size: 1.4em;
+             margin: auto 0;
+             position: relative;
+             left: 20%;
+         }
+
+        .cards-entrees-title{
+            padding-bottom: 10px;
+        }
+
+         .cards-entrees-title h2{
+             font-size: 1em;
+             font-weight: 400;
+             margin-left: 14px;
+             padding-bottom: 5px;
+         }
+
+         .cards-entrees-title-trait{
+             background-color: #99e2d0;
+             height: 5px;
+             width: 12%;
+             margin-left: 14px;
+         }
+
+         .card-entrees-card{
+             margin-left: 14px;
+             margin-right: 14px;
+             border: none;
+             border-radius: 20px;
+             box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+             height: 70px;
+             margin-bottom: 15px;
+             display: flex;
+             align-items: flex-start;
+             justify-content: space-between;
+             padding-left: 10px;
+         }
+         .card-entrees-title{
+             padding-left: 10px;
+             font-size: 1em;
+             font-weight: 200;
+         }
+         .card-entrees-info-price{
+             display: flex;
+             padding-left: 10px;
+             font-size: 1em;
+         }
+         .card-entree-description h3{
+             margin-top: 10px;
+         }
+
+         .icon-heart{
+            font-size: 1.3em;
+            position: absolute;
+        }
+
+        .icon-heart:active{
+            font-size: 1.3em;
+            font-weight:600;
+            color:transparent;
+            background: linear-gradient(#9356DC, #FF79DA);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+            transition: all 500ms ease-in-out;
+        }
+
+
+
+
+     }
+}

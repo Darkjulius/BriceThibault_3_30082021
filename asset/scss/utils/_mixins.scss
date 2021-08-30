@@ -1,0 +1,44 @@
+@mixin flexible($display, $direction2, $content, $align){
+    display: $display;
+    flex-direction: $direction2;
+    justify-content: $content;
+    align-items: $align;
+}
+
+//Margin et padding sur toutes les pages
+@mixin dim-pages($box-sizing, $dim-margin, $dim-padding){
+    box-sizing: $box-sizing;
+    margin: $dim-margin;
+    padding: $dim-padding;
+}
+
+//Design des 2 premiers boutons (section Fonctionnement) de la page index.html
+@mixin buttons-fonctionnement($width, $height, $radius, $ombre){
+    width: $width;
+    height: $height;
+    border-radius: $radius;
+    box-shadow: $ombre;
+}
+
+//Design du bouton Explorer nos restaurants de la page index.html
+@mixin button-explorer($width, $height2, $radius2, $border, $ombre2, $pointer){
+    width: $width;
+    height: $height2;
+    border-radius: $radius2;
+    border: $border;
+    box-shadow: $ombre2;
+    cursor: $pointer;
+}
+
+//Survol des boutons principaux: adoucissement couleur de fond et ombre visible.
+@mixin button-main($opacity, $ombre3){
+    opacity: $opacity;
+    box-shadow: $ombre3;
+}
+
+//Suppression de la mise en forme des liens (Textes blanc et surligné).
+@mixin link($decoration, $color4, $line-height){
+    text-decoration: $decoration;
+    color: $color4;
+    line-height: $line-height;
+}

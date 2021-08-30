@@ -1,0 +1,295 @@
+//HEADER de la page index.html
+.header-index{
+    @media screen and (min-width: 375px){
+        background-color: #fff;
+        box-shadow: 0 0 15px rgb(0 0 0 / 100%);
+        @include flexible($display,$direction2,$content,$align);
+        // height: 10vh;
+            .header-logo{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 23px 0;
+            }
+                .logo{
+                    width: 46%;
+                    height: auto;
+                }
+    }
+}
+
+//SECTION LOCALISATION de la page index.html
+.localisation{
+    @media screen and (min-width: 375px){
+        @include flexible($display,$direction2,$content,$align);
+        // height: 6vh;
+        background-color: $color;
+        opacity: 0.8;
+    }
+    .localisation-choix{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 160px;
+        padding: 16px 0;
+    }
+        input[type=text]{
+            width: 100%;
+            background-color: transparent;
+            border: none;
+            text-align: center;
+            font-size: 1em;
+            &::placeholder{
+                color: #000;
+                opacity: 1;
+            }
+        }
+}
+
+//SECTION RESERVATION de la page index.html
+.booking{
+    @media screen and (min-width: 375px){
+        @include flexible($display,$direction2,$content,$align);
+        background-color: $color2;
+        .booking-title{
+            width: 70%;
+            text-align: center;
+            padding-top: 40px;
+        }
+        .booking-description{
+            width: 80%;
+            text-align: center;
+            padding-top: 20px;
+        }
+        .booking-button-explorer{
+            padding: 30px 0 57px 0;
+        }
+            .explorer{
+                @include button-explorer($width2,$height2,$radius2,$border,$ombre2,$pointer);
+                background: linear-gradient(0deg, $color-primary 0%, $color-secondary 120%);
+                color: #fff;
+                font-size: 1em;
+                font-weight: 400;
+                padding: 0 20px;
+                transition: opacity 600ms ease-in-out;
+                &:hover{
+                    @include button-main($opacity, $ombre3);
+                }
+            }
+    }
+}
+
+//SECTION FONCTIONNEMENT de la page index.html
+.operations{
+    @media screen and (min-width: 375px){
+        margin: $dimension-margin2;
+        .operation-title{
+        padding: 51px 0 34px 0;
+        }
+        .position-operation{
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        align-items: center;
+        }
+        &.choix{
+            grid-area: choix;
+        }
+        &.composition{
+            grid-area: composition;
+        }
+        &.degustation{
+            grid-area: degustation;
+        }
+        .operation{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 15px;
+            margin-bottom: 30px;
+            @include buttons-fonctionnement ($width,$height,$radius,$ombre);
+            position: relative;
+            z-index: 1;
+            background-color: $color2;
+            cursor: $pointer;
+            transition: opacity 600ms ease-in-out;
+            &:hover{
+                @include button-main($opacity, $ombre3);
+            }
+            &.color{
+                background:  ar-gradient(
+                    rgba(147, 86, 205, 0.18), 
+                    rgba(147, 86, 205, 0.18)
+                  );
+            }
+            .operation-number{
+                border-radius: 50%;
+                height: 24px;
+                width: 24px;
+                background-color: $color-primary;
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center; 
+                position: absolute;
+                z-index: 2;
+                left: -12px;
+            }
+            .operation-icone{
+                 position: absolute;
+                 left: 10%;
+            }
+            .color-prim{
+                color: $color-primary;
+            }
+            .operation-text{
+                position: absolute;
+                left: 20%;
+            }
+        }
+    }
+}
+.operations{
+    @media screen and (min-width: 560px){
+        .position-operation{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            height: 200px;
+            margin-bottom: 38px;
+            justify-items: center;
+        }
+        .choix, .composition, .degustation{
+            width: 90%;
+            margin-left: 0;
+        }
+    }     
+}
+.operations{
+    @media screen and (min-width: 800px){
+        .position-operation{
+            height: 100px;
+            display: $display;
+            justify-content: $content4;
+            margin-bottom: 68px;
+        }
+        .choix, .composition, .degustation{
+            width: 100%;
+            // width: 31%;
+        }
+        .choix, .composition{
+            margin-right: 15px;
+        }
+    }     
+}
+
+//SECTION RESTAURANTS de la page index.html
+.restaurants{
+    @media screen and (min-width: 375px){
+        background-color: $color2;
+        padding: 59px 0 44px 0;
+        .restaurants-title{
+            margin: $dimension-margin; 
+            padding-bottom: 28px;
+        }
+        .restaurants-cards{
+            margin: $dimension-margin;
+            display: grid;
+            grid-template-rows: repeat(4, 1fr);
+        }
+        .restaurant-card{
+            display: $display;
+            flex-direction: $direction2;
+            box-shadow: $ombre2;
+            height: 250px;
+            width: 100%;
+            position: relative;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            background-color: #fff;
+        }
+        .restaurant-info{
+            position: absolute;
+            top: 13px;
+            right: 13px;
+            background-color: $color-tertiary;
+            color: #169475;
+            font-weight: bold;
+            padding: 5px;
+            border-radius: 3px;
+            font-size: 0.90em;
+        }
+        .restaurant-card-lien{
+            text-decoration: none;
+            color: black;
+        }
+        .restaurant-img img{
+            height: 174px;
+            width: 100%;
+            object-fit: cover;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+        .restaurant-title-icon{
+            display: $display;
+            justify-content: $content3;
+            margin: 10px 25px 10px 14px;
+        }
+        .restaurant-icon{
+            display: $display;
+            flex-direction: $direction2;
+            justify-content: $content;
+            width: 5%;
+            margin: $margin;
+        }
+
+        .icon-heart{
+            font-size: 1.3em;
+            position: absolute;
+        }
+        
+        i:active{
+            font-weight:600;
+            color:transparent;
+            background: linear-gradient(#9356DC, #FF79DA);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+            transition: all 500ms ease-in-out;
+        }
+       
+    }
+}
+.restaurants{
+    @media screen and (min-width: 560px){
+        .restaurants-cards{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+        .palette, .francaise{
+            width: 95%;
+        }
+    }
+}
+.restaurants{
+    @media screen and (min-width: 800px){
+        .restaurants-cards{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+        .palette, .enchantee, .delice{
+            width: 92%;
+        }
+    }
+}
+.restaurants{
+    @media screen and (min-width: 1060px){
+        .restaurants-cards{
+            display: $display;
+            justify-content: $content4;
+        }
+        .palette, .enchantee, .francaise{
+            margin-right: 20px;
+        }
+    }
+}
