@@ -9,15 +9,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ohmyfood | Accueil</title>
     </head>
-
     <body>
-        <!------------------- HEADER ------------------->
+        <!---------------------- HEADER ---------------------->
         <header class="header-index">
             <div class="header-logo">
-                <img src="img/ohmyfood.png" alt="ohmyfood" class="logo">
+                <img class="logo" src="img/ohmyfood.png" alt="Logo ohmyfood">
             </div>
         </header>
-        <!------------------- LOCALISATION ------------->
+        <!------------------- LOCALISATION ------------------->
         <section class="localisation">
             <div class="localisation-choix">
                 <div class="localisation-icon">
@@ -28,7 +27,7 @@
                 </form>
             </div>
         </section>
-        <!----------------- RESERVATION ---------------->
+        <!-------------------- RESERVATION ------------------->
         <section class="booking">
             <div class="booking-title">
                 <h1>Réservez le menu qui vous convient</h1>
@@ -42,12 +41,12 @@
                         value="Explorer nos restaurants">
             </form>
         </section>
-        <!--------------- FONCTIONNEMENT --------------->
+        <!------------------ FONCTIONNEMENT ------------------>
         <section class="operations">
             <div class="operation-title">
                 <h2>Fonctionnement</h2>
             </div>
-            <div class="position-operation">
+            <div class="operation-position">
                 <div class="operation choix">
                     <div class="operation-number">
                         <span>1</span>
@@ -83,11 +82,9 @@
                         <span>Dégustez au restaurant</span>
                     </div>
                 </div>
-
-
             </div>
         </section>
-        <!---------------- RESTAURANTS ----------------->
+        <!------------------- RESTAURANTS -------------------->
         <section class="restaurants">
             <div class="restaurants-title">
                 <h2>Restaurants</h2>
@@ -102,9 +99,9 @@
                             <img src="img/restaurants/la_palette_du_gout.jpg" alt="La palette du goût">
                         </div>
                         <div class="restaurant-title-icon">
-                            <div class="restaurant-title">
-                                <h3>La palette du goût</h3>
-                                <span>Ménilmontant</span>
+                            <div class="restaurant-infos">
+                                <h3 class="restaurant-title">La palette du goût</h3>
+                                <span class="restaurant-location">Ménilmontant</span>
                             </div>
                             <div class="restaurant-icon">
                                 <i class="far fa-heart icon-heart"></i>
@@ -121,9 +118,9 @@
                             <img src="img/restaurants/la_note_enchantee.jpg" alt="La note enchantée">
                         </div>
                         <div class="restaurant-title-icon">
-                            <div class="restaurant-title">
-                                <h3>La note enchantée</h3>
-                                <span>Charonne</span>
+                            <div class="restaurant-infos">
+                                <h3 class="restaurant-title">La note enchantée</h3>
+                                <span class="restaurant-location">Charonne</span>
                             </div>
                             <div class="restaurant-icon">
                                 <i class="far fa-heart icon-heart"></i>
@@ -137,9 +134,9 @@
                             <img src="img/restaurants/a_la_francaise.jpg" alt="A la française">
                         </div>
                         <div class="restaurant-title-icon">
-                            <div class="restaurant-title">
-                                <h3>A la française</h3>
-                                <span>Cité Rouge</span>
+                            <div class="restaurant-infos">
+                                <h3 class="restaurant-title">A la française</h3>
+                                <span class="restaurant-location">Cité Rouge</span>
                             </div>
                             <div class="restaurant-icon">
                                 <i class="far fa-heart icon-heart"></i>
@@ -153,9 +150,9 @@
                             <img src="img/restaurants/le_delice_des_sens.jpg" alt="Le délice des sens">
                         </div>
                         <div class="restaurant-title-icon">
-                            <div class="restaurant-title">
-                                <h3>Le délice des sens</h3>
-                                <span>Folie-Méricourt</span>
+                            <div class="restaurant-infos">
+                                <h3 class="restaurant-title">Le délice des sens</h3>
+                                <span class="restaurant-location">Folie-Méricourt</span>
                             </div>
                             <div class="restaurant-icon">
                                 <i class="far fa-heart icon-heart"></i>
@@ -165,34 +162,31 @@
                 </div>
             </div>
         </section>
-        <!------------------- FOOTER ------------------->
-                <footer class="footer">
-                    <nav class="footer-infos">
-                        <h3 class="footer-title">ohmyfood</h3>
-                        <ul class="footer-menu">
-                            <li class="liste-1">
-                                <span class="footer-infos-icon-design">
-                                    <i class="fas fa-utensils footer-infos-icon"></i>
-                                </span>
-                                <a href="#">Proposer un restaurant</a>
-                            </li>
-                            <li class="liste-2">
-                                <span class="footer-infos-icon-design">
-                                    <i class="fas fa-hands-helping hand footer-infos-icon"></i>
-                                </span>
-                                <a href="#">Devenir partenaire</a>
-                            </li>
-                            <li class="liste-3">
-                                <a href="#">Mentions légales</a>
-                            </li>
-                            <li class="liste-4">
-                                <a href="#">Contact</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </footer>
-        <!--------------------------------------------->
-        
-
+        <!---------------------- FOOTER ---------------------->
+        <footer class="footer">
+            <nav class="footer-infos">
+                <h3 class="footer-title">ohmyfood</h3>
+                <ul class="footer-menu">
+                    <li class="liste-1">
+                        <span class="footer-infos-icon-design">
+                            <i class="fas fa-utensils footer-infos-icon"></i>
+                        </span>
+                        <a href="#">Proposer un restaurant</a>
+                    </li>
+                    <li class="liste-2">
+                        <span class="footer-infos-icon-design">
+                            <i class="fas fa-hands-helping hand footer-infos-icon"></i>
+                        </span>
+                        <a href="#">Devenir partenaire</a>
+                    </li>
+                    <li class="liste-3">
+                        <a href="#">Mentions légales</a>
+                    </li>
+                    <li class="liste-4">
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
     </body>
 </html>

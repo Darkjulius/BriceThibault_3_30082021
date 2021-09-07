@@ -1,51 +1,58 @@
-// Variables générales
+//Couleurs
 $color-primary: #9356cd;
 $color-secondary: #ff79da;
 $color-tertiary: #99e2D0;
-$color5: #000;
-$policy: 'Shrikhand';
-$policy-text: 'Roboto';
-$dimension-margin: 0 20px;
-$dimension-margin2: 0 20px 38px 20px;
-$dimension-margin3: 0 20px 44px 20px;
-$dimension-padding: 0px 20px 38px 20px;
-$pointer: pointer;
-    // Variables Dimensions sur toutes les pages
-    $box-sizing: border-box;
-    $dim-margin: 0px;
-    $dim-padding: 0px;
-    $margin: auto 0px;
-    // Variables display: flex
-    $display: flex;
-    $direction: row;
-    $direction2: column;
-    $align: center;
-    $align2: flex-start;
-    $content: center;
-    $content2: flex-start;
-    $content3: space-between;
-    $content4: space-around;
-    $content5: unset;
-
-
-// Variables page Accueil
 $color: #eaeaea;
 $color2: #f6f6f6;
 $color3: #353535;
 $color4: #fff;
-$width: 90%;
-$width2: 100%;
-$height: 10vh;
-$height2: 8vh;
-$radius: 25px;
-$radius2: 30px;
+$color5: #000;
+$color6: transparent;
+$color7: #f5eefe;
+$color8: #169475;
+
+//Polices
+$policy: 'Shrikhand';
+$policy-text: 'Roboto';
+
+// Alignement
+$display: flex;
+$display2: grid;
+$display3: inline-block;
+$direction: row;
+$direction2: column;
+$align: center;
+$align2: flex-start;
+$content: center;
+$content2: flex-start;
+$content3: space-between;
+$content4: space-around;
+$content5: unset;
+$position: relative;
+$position2: absolute;
+
+//Box-Shadow
 $ombre: 0 5px 10px rgba(0, 0, 0, 0.2);
 $ombre2: 0 5px 10px rgb(0 0 0 / 20%);
 $ombre3: 0 5px 10px rgb(0 0 0 / 70%);
-$align: center;
+$ombre4: 0 0 15px rgb(0 0 0 / 100%);
+
+//Global
+$box-sizing: border-box;
+$dim-margin: 0px;
+$dim-padding: 0px;
+$margin: auto 0px;
+$dimension-margin: 0 20px;
+$dimension-margin2: 0 20px 38px 20px;
+$dimension-margin3: 0 20px 44px 20px;
+$dimension-padding: 0px 20px 38px 20px;
 $border: none;
+$width: 100%;
+$width2: 90%;
+$height: 8vh;
+$height2: 10vh;
+$radius: 30px;
+$radius2: 25px;
+$radius3: 15px;
+$pointer: pointer;
 $opacity: 0.5;
-$decoration: none;
-$line-height: 2em;
-$bottom: 2%;
-$right: .5%;

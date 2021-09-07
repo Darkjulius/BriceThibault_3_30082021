@@ -1,8 +1,8 @@
-*{
-    @include dim-pages (border-box, 0px, 0px);
-}
 body{
     font-family: $policy-text;
+}
+*{
+    @include dim-pages (border-box, 0px, 0px);
 }
 
 //FOOTER de toutes les pages
@@ -23,12 +23,12 @@ body{
             padding-bottom: 7px;
         }
         .footer-menu li a {
-            color: #fff;
+            color: $color4;
             text-decoration: none;
         }
         .footer-infos-icon-design{
             margin-right: 15px;
-            display: inline-block;
+            display: $display3;
             width: 1px;
             & i{
                 font-size: 11px;
@@ -42,7 +42,7 @@ body{
             text-align: $align;
         }
         .footer-menu{
-            display: grid;
+            display: $display2;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
         }
@@ -67,14 +67,14 @@ body{
         }
     }
 }
-// Header des pages menus
+// HEADER des pages menus
 .header{
     @media screen and (min-width: 375px){
         @include flexible($display,$direction,$content,$align);
         padding: 23px 0;
         font-family: $policy;
         .header-icon{
-            position: absolute;
+            position: $position2;
             left: 5%;
         }
         .header-logo{
@@ -82,103 +82,85 @@ body{
         }
     }
  }
-
- //Image de la carte du menu
- .menu-image{
-     @media screen and (min-width: 375px){
-         img{
-             width: 100%;
-         }
-     }
- }
-
- .card{
-     @media screen and (min-width: 375px){
-         position: relative;
-         z-index: 1;
-         bottom: 50px;
-         background-color: #fff;
-         border-top-left-radius: 20px;
-         border-top-right-radius: 20px;
-
-         .card-title-icon{
-            margin-left: 14px;
-            margin-right: 14px;
-            padding-top: 35px;
-            font-family: $policy;
-            padding-bottom: 36px;
-            display: flex;
-         }
-
-         .card-icon{
-             font-size: 1.4em;
-             margin: auto 0;
-             position: relative;
-             left: 20%;
-         }
-
-        .cards-entrees-title{
-            padding-bottom: 10px;
+//IMAGE de la carte du menu
+.menu-image{
+    @media screen and (min-width: 375px){
+        img{
+            width: 100%;
         }
-
-         .cards-entrees-title h2{
-             font-size: 1em;
-             font-weight: 400;
-             margin-left: 14px;
-             padding-bottom: 5px;
-         }
-
-         .cards-entrees-title-trait{
-             background-color: #99e2d0;
-             height: 5px;
-             width: 12%;
-             margin-left: 14px;
-         }
-
-         .card-entrees-card{
-             margin-left: 14px;
-             margin-right: 14px;
-             border: none;
-             border-radius: 20px;
-             box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
-             height: 70px;
-             margin-bottom: 15px;
-             display: flex;
-             align-items: flex-start;
-             justify-content: space-between;
-             padding-left: 10px;
-         }
-         .card-entrees-title{
-             padding-left: 10px;
-             font-size: 1em;
-             font-weight: 200;
-         }
-         .card-entrees-info-price{
-             display: flex;
-             padding-left: 10px;
-             font-size: 1em;
-         }
-         .card-entree-description h3{
-             margin-top: 10px;
-         }
-
-         .icon-heart{
-            font-size: 1.3em;
-            position: absolute;
-        }
-
-        .icon-heart:active{
-            font-size: 1.3em;
-            font-weight:600;
-            color:transparent;
-            background: linear-gradient(#9356DC, #FF79DA);
-            -webkit-background-clip:text;
-            -webkit-text-fill-color:transparent;
-            transition: all 500ms ease-in-out;
-        }
-
-
-
-
-     }
+    }
+}
+//MENU de la carte
+.card{
+    @media screen and (min-width: 375px){
+        position: $position;
+        z-index: 1;
+        bottom: 50px;
+        background-color: $color4;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    .card-title-icon{
+        margin-left: 14px;
+        margin-right: 14px;
+        padding-top: 35px;
+        font-family: $policy;
+        padding-bottom: 36px;
+        display: $display;
+    }
+    .card-icon{
+        font-size: 1.5em;
+        margin: $margin;
+        position: $position;
+        left: 20%;
+    }
+    i:active{
+        font-weight: 600;
+        color: $color6;
+        background: linear-gradient(#9356DC, #FF79DA);
+        -webkit-background-clip:text;
+        -webkit-text-fill-color:$color6;
+        transition: all 500ms ease-in-out;
+    }
+    .cards-entrees-title{
+        padding-bottom: 10px;
+    }
+    .cards-entrees-title h2{
+        font-size: 1em;
+        font-weight: 400;
+        margin-left: 14px;
+        padding-bottom: 5px;
+    }
+    .cards-entrees-title-trait{
+        background-color: $color-tertiary;
+        height: 5px;
+        width: 12%;
+        margin-left: 14px;
+    }
+    .card-entrees-card{
+        margin-left: 14px;
+        margin-right: 14px;
+        border: $border;
+        border-radius: 20px;
+        box-shadow: $ombre2;
+        height: 70px;
+        margin-bottom: 15px;
+        display: $display;
+        align-items: $align2;
+        justify-content: $content3;
+        padding-left: 10px;
+    }
+    .card-entrees-title{
+        padding-left: 10px;
+        font-size: 1em;
+        font-weight: 200;
+    }
+    .card-entrees-info-price{
+        display: $display;
+        padding-left: 10px;
+        font-size: 1em;
+    }
+    .card-entree-description h3{
+        margin-top: 10px;
+    }
 }

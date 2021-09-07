@@ -13,18 +13,18 @@
 }
 
 //Design des 2 premiers boutons (section Fonctionnement) de la page index.html
-@mixin buttons-fonctionnement($width, $height, $radius, $ombre){
-    width: $width;
-    height: $height;
-    border-radius: $radius;
+@mixin buttons-fonctionnement($width2, $height2, $radius2, $ombre){
+    width: $width2;
+    height: $height2;
+    border-radius: $radius2;
     box-shadow: $ombre;
 }
 
 //Design du bouton Explorer nos restaurants de la page index.html
-@mixin button-explorer($width, $height2, $radius2, $border, $ombre2, $pointer){
+@mixin button-explorer($width, $height, $radius, $border, $ombre2, $pointer){
     width: $width;
-    height: $height2;
-    border-radius: $radius2;
+    height: $height;
+    border-radius: $radius;
     border: $border;
     box-shadow: $ombre2;
     cursor: $pointer;
@@ -34,11 +34,4 @@
 @mixin button-main($opacity, $ombre3){
     opacity: $opacity;
     box-shadow: $ombre3;
-}
-
-//Suppression de la mise en forme des liens (Textes blanc et surligné).
-@mixin link($decoration, $color4, $line-height){
-    text-decoration: $decoration;
-    color: $color4;
-    line-height: $line-height;
 }
