@@ -122,45 +122,51 @@ body{
         -webkit-text-fill-color:$color6;
         transition: all 500ms ease-in-out;
     }
-    .cards-entrees-title{
+    .cards-title{
         padding-bottom: 10px;
     }
-    .cards-entrees-title h2{
+    .cards-title h2{
         font-size: 1em;
         font-weight: 400;
         margin-left: 14px;
         padding-bottom: 5px;
     }
     .cards-entrees-title-trait{
-        background-color: $color-tertiary;
-        height: 5px;
-        width: 12%;
-        margin-left: 14px;
+        @include trait-vert ($color-tertiary, $height3, $width3, $left);
     }
-    .card-entrees-card{
-        margin-left: 14px;
-        margin-right: 14px;
-        border: $border;
-        border-radius: 20px;
-        box-shadow: $ombre2;
-        height: 70px;
-        margin-bottom: 15px;
-        display: $display;
-        align-items: $align2;
-        justify-content: $content3;
-        padding-left: 10px;
+    .card-items{
+        @include menu ($display2, $template-rows, $template-columns, $template-areas, $margin2, $height2, $border, $radius4, $ombre2, $bottom, $left2, $align);
     }
-    .card-entrees-title{
-        padding-left: 10px;
-        font-size: 1em;
-        font-weight: 200;
+    .card-name{
+    grid-area: nom;
+    padding-top: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     }
-    .card-entrees-info-price{
-        display: $display;
-        padding-left: 10px;
-        font-size: 1em;
+    .card-description{
+    grid-area: description;
+    padding-bottom: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     }
-    .card-entree-description h3{
-        margin-top: 10px;
+    .card-price{
+    grid-area: prix;
+    padding-right: 23px;
     }
+    .card-check{
+    grid-area: check;
+        @include check($display, $flex-flow, $content, $box-sizing, $transition, $radius5, $color-tertiary, $align3, $width4);
+    }
+    .card-items:hover .card-check{
+        width: 73px;
+    }
+    .card-items:hover .icon-check{
+        @include transition-check($transition, $transform, $radius4, $color4, $color-tertiary);
+        padding: 3px;
+    }
+    .icon-check{
+        @include menu-check($display, $align, $size, $color4, $overflow);
+    }   
 }

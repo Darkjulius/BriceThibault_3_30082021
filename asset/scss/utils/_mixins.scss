@@ -35,3 +35,58 @@
     opacity: $opacity;
     box-shadow: $ombre3;
 }
+
+//Menus
+@mixin menu ($display2, $template-rows, $template-columns, $template-areas, $margin2, $height2, $border, $radius4, $ombre2, $bottom, $left2, $align){
+    display: $display2;
+    grid-template-rows: $template-rows;
+    grid-template-columns: $template-columns;
+    grid-template-areas: $template-areas;
+    margin: $margin2;
+    height: $height2;
+    border: $border;
+    border-radius: $radius4;
+    box-shadow: $ombre2;
+    margin-bottom: $bottom;
+    padding-left: $left2;
+    align-items: $align;
+}
+
+//Trait vert en-dessous de  Entrées, Plats et Desserts.
+@mixin trait-vert ($color-tertiary, $height3, $width3, $left){
+    background-color: $color-tertiary;
+    height: $height3;
+    width: $width3;
+    margin-left: $left;
+}
+
+//Menu check
+@mixin check($display, $flex-flow, $content, $box-sizing, $transition, $radius5, $color-tertiary, $align3, $width4){
+    display: $display;
+    flex-flow: $flex-flow;
+    justify-content: $content;
+    box-sizing: $box-sizing;
+    transition: $transition;
+    border-radius: $radius5;
+    background-color: $color-tertiary;
+    align-self: $align3;
+    width: $width4;
+}
+
+//Icone Check Transition
+@mixin transition-check($transition, $transform, $radius4, $color4, $color-tertiary){
+    transition: $transition;
+    transform: $transform;
+    border-radius: $radius4;
+    background-color: $color4;
+    color: $color-tertiary;
+}
+
+//Icone Check
+@mixin menu-check($display, $align, $size, $color4, $overflow){
+    display: $display;
+    align-self: $align;
+    font-size: $size;
+    color: $color4;
+    overflow: $overflow;
+}

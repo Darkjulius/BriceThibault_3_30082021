@@ -14,6 +14,7 @@ $color8: #169475;
 //Polices
 $policy: 'Shrikhand';
 $policy-text: 'Roboto';
+$size: 1.2rem;
 
 // Alignement
 $display: flex;
@@ -23,6 +24,7 @@ $direction: row;
 $direction2: column;
 $align: center;
 $align2: flex-start;
+$align3: stretch;
 $content: center;
 $content2: flex-start;
 $content3: space-between;
@@ -30,6 +32,10 @@ $content4: space-around;
 $content5: unset;
 $position: relative;
 $position2: absolute;
+$template-rows: 1fr 1fr;
+$template-columns: 1fr auto auto;
+$template-areas: "nom nom check" "description prix check";
+$flex-flow: nowrap row;
 
 //Box-Shadow
 $ombre: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -42,6 +48,7 @@ $box-sizing: border-box;
 $dim-margin: 0px;
 $dim-padding: 0px;
 $margin: auto 0px;
+$margin2: 0 14px;
 $dimension-margin: 0 20px;
 $dimension-margin2: 0 20px 38px 20px;
 $dimension-margin3: 0 20px 44px 20px;
@@ -49,10 +56,26 @@ $dimension-padding: 0px 20px 38px 20px;
 $border: none;
 $width: 100%;
 $width2: 90%;
+$width3: 12%;
+$width4: 0;
 $height: 8vh;
 $height2: 10vh;
+$height3: .7vh;
 $radius: 30px;
 $radius2: 25px;
 $radius3: 15px;
+$radius4: 20px;
+$radius5: 0px 20px 20px 0px;
 $pointer: pointer;
 $opacity: 0.5;
+$left: 14px;
+$left2: 10px;
+$right: 14px;
+$bottom: 15px;
+$transition: all 400ms ease-in-out;
+$transform: rotate(360deg);
+$overflow: hidden;
+
+
+
+

@@ -124,10 +124,10 @@ body {
   -webkit-text-fill-color: transparent;
   transition: all 500ms ease-in-out;
 }
-.card .cards-entrees-title {
+.card .cards-title {
   padding-bottom: 10px;
 }
-.card .cards-entrees-title h2 {
+.card .cards-title h2 {
   font-size: 1em;
   font-weight: 400;
   margin-left: 14px;
@@ -135,35 +135,71 @@ body {
 }
 .card .cards-entrees-title-trait {
   background-color: #99e2D0;
-  height: 5px;
+  height: 0.7vh;
   width: 12%;
   margin-left: 14px;
 }
-.card .card-entrees-card {
-  margin-left: 14px;
-  margin-right: 14px;
+.card .card-items {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr auto auto;
+  grid-template-areas: "nom nom check" "description prix check";
+  margin: 0 14px;
+  height: 10vh;
   border: none;
   border-radius: 20px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  height: 70px;
   margin-bottom: 15px;
+  padding-left: 10px;
+  align-items: center;
+}
+.card .card-name {
+  grid-area: nom;
+  padding-top: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.card .card-description {
+  grid-area: description;
+  padding-bottom: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.card .card-price {
+  grid-area: prix;
+  padding-right: 23px;
+}
+.card .card-check {
+  grid-area: check;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  padding-left: 10px;
+  flex-flow: nowrap row;
+  justify-content: center;
+  box-sizing: border-box;
+  transition: all 400ms ease-in-out;
+  border-radius: 0px 20px 20px 0px;
+  background-color: #99e2D0;
+  align-self: stretch;
+  width: 0;
 }
-.card .card-entrees-title {
-  padding-left: 10px;
-  font-size: 1em;
-  font-weight: 200;
+.card .card-items:hover .card-check {
+  width: 73px;
 }
-.card .card-entrees-info-price {
+.card .card-items:hover .icon-check {
+  transition: all 400ms ease-in-out;
+  transform: rotate(360deg);
+  border-radius: 20px;
+  background-color: #fff;
+  color: #99e2D0;
+  padding: 3px;
+}
+.card .icon-check {
   display: flex;
-  padding-left: 10px;
-  font-size: 1em;
-}
-.card .card-entree-description h3 {
-  margin-top: 10px;
+  align-self: center;
+  font-size: 1.2rem;
+  color: #fff;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 375px) {
