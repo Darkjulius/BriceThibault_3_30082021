@@ -124,6 +124,20 @@ body {
   -webkit-text-fill-color: transparent;
   transition: all 500ms ease-in-out;
 }
+.card .cards-menu {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  align-items: center;
+}
+.card.cards-entrees {
+  grid-area: entrees;
+}
+.card.cards-plats {
+  grid-area: plats;
+}
+.card.cards-desserts {
+  grid-area: desserts;
+}
 .card .cards-title {
   padding-bottom: 10px;
 }
@@ -133,11 +147,15 @@ body {
   margin-left: 14px;
   padding-bottom: 5px;
 }
+.card .cards-desserts, .card .cards-plats {
+  margin-top: 44px;
+}
 .card .cards-entrees-title-trait {
   background-color: #99e2D0;
   height: 0.7vh;
-  width: 12%;
+  width: 40px;
   margin-left: 14px;
+  margin-bottom: 6px;
 }
 .card .card-items {
   display: grid;
@@ -150,19 +168,19 @@ body {
   border-radius: 20px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   margin-bottom: 15px;
-  padding-left: 10px;
+  padding-left: 0 23px;
   align-items: center;
+  animation: apparition ease-in-out 1500ms backwards;
 }
 .card .card-name {
   grid-area: nom;
-  padding-top: 5px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  padding: 10px 10px 0 10px;
 }
 .card .card-description {
   grid-area: description;
-  padding-bottom: 5px;
+  padding: 10px 0px 10px 10px;
+}
+.card .card-name, .card .card-description {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -201,7 +219,80 @@ body {
   color: #fff;
   overflow: hidden;
 }
+@keyframes apparition {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.card .button-command {
+  display: flex;
+  justify-content: center;
+}
+.card .button-command .command {
+  margin-top: 50px;
+  height: 6vh;
+  border-radius: 30px;
+  width: 200px;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  font-size: 1em;
+  background: linear-gradient(0deg, #9356cd, #ff79da);
+}
 
+@media screen and (min-width: 600px) {
+  .card-title-icon {
+    justify-content: center;
+  }
+
+  .card-icon {
+    position: unset !important;
+    padding-left: 30px;
+  }
+
+  .cards-menu {
+    grid-template-rows: repeat(2, 1fr) !important;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cards-title h2 {
+    text-align: center;
+  }
+
+  .card .cards-entrees-title-trait {
+    width: 91% !important;
+  }
+
+  .card .cards-plats {
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 960px) {
+  .cards-menu {
+    display: flex !important;
+    justify-content: space-around;
+  }
+
+  .card .cards-desserts {
+    margin-top: 0;
+  }
+
+  .cards-entrees, .cards-plats, .cards-desserts {
+    width: 33%;
+  }
+
+  .card .cards-entrees-title-trait {
+    width: 94% !important;
+  }
+}
 @media screen and (min-width: 375px) {
   .header-index {
     background-color: #fff;

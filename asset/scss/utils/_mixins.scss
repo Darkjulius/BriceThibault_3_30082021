@@ -37,7 +37,7 @@
 }
 
 //Menus
-@mixin menu ($display2, $template-rows, $template-columns, $template-areas, $margin2, $height2, $border, $radius4, $ombre2, $bottom, $left2, $align){
+@mixin menu ($display2, $template-rows, $template-columns, $template-areas, $margin2, $height2, $border, $radius4, $ombre2, $bottom, $padding, $align){
     display: $display2;
     grid-template-rows: $template-rows;
     grid-template-columns: $template-columns;
@@ -48,7 +48,7 @@
     border-radius: $radius4;
     box-shadow: $ombre2;
     margin-bottom: $bottom;
-    padding-left: $left2;
+    padding-left: $padding;
     align-items: $align;
 }
 
@@ -89,4 +89,22 @@
     font-size: $size;
     color: $color4;
     overflow: $overflow;
+}
+
+//Masque texte du menu
+@mixin ellipsis ($overflow, $white-space, $text-overflow){
+    $overflow: $overflow;
+    $white-space: $white-space;
+    $text-overflow: $text-overflow;
+}
+
+//Bouton Commande
+@mixin commande($margin3, $height4, $radius, $width5, $color4, $pointer, $border){
+    margin-top: $margin3;
+    height: $height4;
+    border-radius: $radius;
+    width: $width5;
+    color:$color4;
+    cursor: $pointer;
+    border: $border;
 }
