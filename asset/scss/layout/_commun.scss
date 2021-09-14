@@ -2,16 +2,16 @@ body{
     font-family: $policy-text;
 }
 *{
-    @include dim-pages (border-box, 0px, 0px);
+    @include dim-pages;
 }
 
 //FOOTER de toutes les pages
 .footer{
     @media screen and (min-width: 375px){
-     background-color: $color3;
-     color: $color4;
+     background-color: #353535;
+     color: $color;
         .footer-infos{
-            padding: $dimension-padding;
+            padding: 0px 20px 38px 20px;
         }
         .footer-title{
             font-family: $policy;
@@ -23,12 +23,12 @@ body{
             padding-bottom: 7px;
         }
         .footer-menu li a {
-            color: $color4;
+            color: $color;
             text-decoration: none;
         }
         .footer-infos-icon-design{
             margin-right: 15px;
-            display: $display3;
+            display: inline-block;
             width: 1px;
             & i{
                 font-size: 11px;
@@ -51,7 +51,7 @@ body{
         }
         .liste-1, .liste-2, .liste-3, .liste-4{
             display: $display;
-            justify-content: $content;
+            justify-content: center;
             line-height: 2em;
         }
     }
@@ -71,11 +71,11 @@ body{
 // HEADER des pages menus
 .header{
     @media screen and (min-width: 375px){
-        @include flexible($display,$direction,$content,$align);
+        @include flexible;
         padding: 23px 0;
         font-family: $policy;
         .header-icon{
-            position: $position2;
+            position: absolute;
             left: 5%;
         }
         .header-logo{
@@ -96,16 +96,15 @@ body{
 //MENU de la carte
 .card{
     @media screen and (min-width: 375px){
-        position: $position;
+        position: relative;
         z-index: 1;
         bottom: 50px;
-        background-color: $color4;
+        background-color: $color;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
     }
     .card-title-icon{
-        margin-left: 14px;
-        margin-right: 14px;
+        margin: 0 14px;
         padding-top: 35px;
         font-family: $policy;
         padding-bottom: 36px;
@@ -113,16 +112,16 @@ body{
     }
     .card-icon{
         font-size: 1.5em;
-        margin: $margin;
-        position: $position;
+        margin: auto 0px;
+        position: relative;
         left: 20%;
     }
     i:active{
         font-weight: 600;
-        color: $color6;
+        color: transparent;
         background: linear-gradient(#9356DC, #FF79DA);
-        -webkit-background-clip:text;
-        -webkit-text-fill-color:$color6;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         transition: all 500ms ease-in-out;
     }
     .cards-menu{
@@ -153,47 +152,13 @@ body{
         margin-top: 44px;
     }
     .cards-entrees-title-trait{
-        @include trait-vert ($color-tertiary, $height3, $width3, $left);
+        @include trait-vert ($color-tertiary);
         margin-bottom: 6px
     }
     .card-items{
-        @include menu ($display2, $template-rows, $template-columns, $template-areas, $margin2, $height2, $border, $radius4, $ombre2, $bottom, $padding, $align);
+        @include menu;
         animation: apparition ease-in-out 1500ms backwards;
     }
-    .card-name{
-        grid-area: nom;
-        padding: 10px 10px 0 10px;
-        
-    }
-    .card-description{
-        grid-area: description;
-        padding: 10px 0px 10px 10px;
-        
-    }
-    .card-name, .card-description{
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-    }
-    .card-price{
-        grid-area: prix;
-        padding-right: 23px;
-    }
-    .card-check{
-        grid-area: check;
-        @include check($display, $flex-flow, $content, $box-sizing, $transition, $radius5, $color-tertiary, $align3, $width4);
-    }
-    .card-items:hover .card-check{
-        width: 73px;
-    }
-    .card-items:hover .icon-check{
-        @include transition-check($transition, $transform, $radius4, $color4, $color-tertiary);
-        padding: 3px;
-    }
-    .icon-check{
-        @include menu-check($display, $align, $size, $color4, $overflow);
-    }
-
     @keyframes apparition {
         0%{
             transform: translateY(50px);
@@ -207,11 +172,42 @@ body{
             opacity: 1;
         }
     }
+    .card-name{
+        grid-area: nom;
+        padding: 10px 10px 0 10px;
+        
+    }
+    .card-description{
+        grid-area: description;
+        padding: 10px 0px 10px 10px;
+        
+    }
+    .card-name, .card-description{
+        @include ellipsis
+    }
+    .card-price{
+        grid-area: prix;
+        padding-right: 23px;
+    }
+    .card-check{
+        grid-area: check;
+        @include check($color-tertiary);
+    }
+    .card-items:hover .card-check{
+        width: 73px;
+    }
+    .card-items:hover .icon-check{
+        @include transition-check($color-tertiary);
+        padding: 3px;
+    }
+    .icon-check{
+        @include menu-check;
+    }
     .button-command{
         display: flex;
         justify-content: center;
         & .command{
-            @include commande($margin3, $height4, $radius, $width5, $color4, $pointer, $border);
+            @include commande;
             font-size: 1em;
             background: linear-gradient(0deg, $color-primary, $color-secondary);
         }
@@ -219,6 +215,7 @@ body{
 }
 
 @media screen and (min-width: 600px){
+    
     .card-title-icon{
         justify-content: center;
     }
@@ -239,11 +236,17 @@ body{
     .card .cards-plats{
         margin-top: 0;
     }
+    .command{
+        margin-top: 90px !important;
+    }
 }
 @media screen and (min-width: 960px){
+    .card{
+        bottom: 250px;
+    }
     .cards-menu{
        display: $display !important;
-       justify-content: $content4;
+       justify-content: space-around;
     }
     .card .cards-desserts{
         margin-top: 0;

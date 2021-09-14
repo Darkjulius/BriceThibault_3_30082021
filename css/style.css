@@ -71,7 +71,7 @@ body {
 @media screen and (min-width: 375px) {
   .header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 23px 0;
@@ -103,8 +103,7 @@ body {
   }
 }
 .card .card-title-icon {
-  margin-left: 14px;
-  margin-right: 14px;
+  margin: 0 14px;
   padding-top: 35px;
   font-family: "Shrikhand";
   padding-bottom: 36px;
@@ -172,6 +171,19 @@ body {
   align-items: center;
   animation: apparition ease-in-out 1500ms backwards;
 }
+@keyframes apparition {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .card .card-name {
   grid-area: nom;
   padding: 10px 10px 0 10px;
@@ -199,7 +211,7 @@ body {
   border-radius: 0px 20px 20px 0px;
   background-color: #99e2D0;
   align-self: stretch;
-  width: 0;
+  width: 0px;
 }
 .card .card-items:hover .card-check {
   width: 73px;
@@ -218,19 +230,6 @@ body {
   font-size: 1.2rem;
   color: #fff;
   overflow: hidden;
-}
-@keyframes apparition {
-  0% {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 .card .button-command {
   display: flex;
@@ -274,8 +273,16 @@ body {
   .card .cards-plats {
     margin-top: 0;
   }
+
+  .command {
+    margin-top: 90px !important;
+  }
 }
 @media screen and (min-width: 960px) {
+  .card {
+    bottom: 250px;
+  }
+
   .cards-menu {
     display: flex !important;
     justify-content: space-around;
@@ -296,7 +303,7 @@ body {
 @media screen and (min-width: 375px) {
   .header-index {
     background-color: #fff;
-    box-shadow: 0 0 15px black;
+    box-shadow: 0 0 15px rgb 0 0 0/100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -365,17 +372,17 @@ body {
     padding: 30px 0 57px 0;
   }
   .booking .explorer {
-    width: 100%;
-    height: 8vh;
     border-radius: 30px;
     border: none;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    background: linear-gradient(0deg, #9356cd 0%, #ff79da 120%);
     color: #fff;
+    background: linear-gradient(0deg, #9356cd 0%, #ff79da 120%);
     font-size: 1em;
     font-weight: 400;
     padding: 0 20px;
+    width: 100%;
+    height: 8vh;
     transition: opacity 600ms ease-in-out;
   }
   .booking .explorer:hover {
@@ -409,16 +416,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 15px;
-    margin-bottom: 30px;
-    width: 90%;
-    height: 10vh;
     border-radius: 25px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     position: relative;
-    z-index: 1;
+    width: 95%;
+    height: 10vh;
     background-color: #f6f6f6;
     cursor: pointer;
+    margin-left: 15px;
+    margin-bottom: 30px;
+    z-index: 1;
     transition: opacity 600ms ease-in-out;
   }
   .operations .operation:hover {
@@ -429,15 +436,15 @@ body {
     background: #f5eefe;
   }
   .operations .operation .operation-number {
-    border-radius: 50%;
-    height: 24px;
-    width: 24px;
     background-color: #9356cd;
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
     z-index: 2;
     left: -12px;
   }
@@ -491,11 +498,11 @@ body {
     padding: 59px 0 44px 0;
   }
   .restaurants .restaurants-title {
-    margin: 0 20px;
+    margin: 0px 20px;
     padding-bottom: 28px;
   }
   .restaurants .restaurants-cards {
-    margin: 0 20px;
+    margin: 0px 20px;
     display: grid;
     grid-template-rows: repeat(4, 1fr);
   }
@@ -503,19 +510,19 @@ body {
     display: flex;
     flex-direction: column;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    height: 250px;
-    width: 100%;
     position: relative;
     border-radius: 15px;
-    margin-bottom: 20px;
     background-color: #fff;
+    height: 250px;
+    width: 100%;
+    margin-bottom: 20px;
   }
   .restaurants .restaurant-info {
     position: absolute;
-    top: 13px;
-    right: 13px;
     background-color: #99e2D0;
     color: #169475;
+    top: 13px;
+    right: 13px;
     font-weight: bold;
     padding: 5px;
     border-radius: 3px;

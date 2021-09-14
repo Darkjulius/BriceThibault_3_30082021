@@ -1,110 +1,169 @@
-@mixin flexible($display, $direction2, $content, $align){
-    display: $display;
-    flex-direction: $direction2;
-    justify-content: $content;
-    align-items: $align;
+@mixin flexible{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 //Margin et padding sur toutes les pages
-@mixin dim-pages($box-sizing, $dim-margin, $dim-padding){
-    box-sizing: $box-sizing;
-    margin: $dim-margin;
-    padding: $dim-padding;
+@mixin dim-pages{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
 }
 
+// MIXINS DE LA PAGE index.html
+
 //Design des 2 premiers boutons (section Fonctionnement) de la page index.html
-@mixin buttons-fonctionnement($width2, $height2, $radius2, $ombre){
-    width: $width2;
-    height: $height2;
-    border-radius: $radius2;
-    box-shadow: $ombre;
+@mixin buttons-fonctionnement{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    width: 95%;
+    height: 10vh;
+    background-color: #f6f6f6;
+    cursor: pointer;
+    margin-left: 15px;
+    margin-bottom: 30px;
+    z-index: 1;      
 }
 
 //Design du bouton Explorer nos restaurants de la page index.html
-@mixin button-explorer($width, $height, $radius, $border, $ombre2, $pointer){
-    width: $width;
-    height: $height;
-    border-radius: $radius;
-    border: $border;
-    box-shadow: $ombre2;
-    cursor: $pointer;
+@mixin button-explorer{
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+    cursor: pointer;
+    color: #fff;
+    background: linear-gradient(0deg, $color-primary 0%, $color-secondary 120%);       
+    font-size: 1em;
+    font-weight: 400;
+    padding: 0 20px;
+    width: 100%;
+    height: 8vh;
 }
 
 //Survol des boutons principaux: adoucissement couleur de fond et ombre visible.
-@mixin button-main($opacity, $ombre3){
-    opacity: $opacity;
-    box-shadow: $ombre3;
+@mixin button-main{
+    opacity: 0.5;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 70%);
 }
 
+//Icone Nombre sur les 3 boutons (Choisir un restaurant, Composition du menu, Dégustez au restaurant).
+@mixin icon-number($color-primary){
+    background-color: $color-primary;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    z-index: 2;
+    left: -12px;
+}
+
+//Liste des restaurants (Positionnement).
+@mixin restaurant-card{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+    position: relative;
+    border-radius: 15px;
+    background-color: #fff;
+    height: 250px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+//Information "Nouveau" concernant le restaurant.
+@mixin info($color-tertiary){
+    position: absolute;
+    background-color: $color-tertiary;
+    color: #169475;
+    top: 13px;
+    right: 13px;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 0.90em;
+}
+
+// MIXINS DES DIFFERENTES PAGES MENUS POUR CHAQUES RESTAURANTS
+
 //Menus
-@mixin menu ($display2, $template-rows, $template-columns, $template-areas, $margin2, $height2, $border, $radius4, $ombre2, $bottom, $padding, $align){
-    display: $display2;
-    grid-template-rows: $template-rows;
-    grid-template-columns: $template-columns;
-    grid-template-areas: $template-areas;
-    margin: $margin2;
-    height: $height2;
-    border: $border;
-    border-radius: $radius4;
-    box-shadow: $ombre2;
-    margin-bottom: $bottom;
-    padding-left: $padding;
-    align-items: $align;
+@mixin menu{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr auto auto;
+    grid-template-areas: "nom nom check" "description prix check";
+    margin: 0 14px;
+    height: 10vh;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+    margin-bottom: 15px;
+    padding-left: 0 23px;
+    align-items: center;
 }
 
 //Trait vert en-dessous de  Entrées, Plats et Desserts.
-@mixin trait-vert ($color-tertiary, $height3, $width3, $left){
+@mixin trait-vert ($color-tertiary){
     background-color: $color-tertiary;
-    height: $height3;
-    width: $width3;
-    margin-left: $left;
+    height: .7vh;
+    width: 40px;
+    margin-left: 14px;
 }
 
 //Menu check
-@mixin check($display, $flex-flow, $content, $box-sizing, $transition, $radius5, $color-tertiary, $align3, $width4){
-    display: $display;
-    flex-flow: $flex-flow;
-    justify-content: $content;
-    box-sizing: $box-sizing;
-    transition: $transition;
-    border-radius: $radius5;
+@mixin check($color-tertiary){
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: center;
+    box-sizing: border-box;
+    transition: all 400ms ease-in-out;
+    border-radius: 0px 20px 20px 0px;
     background-color: $color-tertiary;
-    align-self: $align3;
-    width: $width4;
+    align-self: stretch;
+    width: 0px;
 }
 
 //Icone Check Transition
-@mixin transition-check($transition, $transform, $radius4, $color4, $color-tertiary){
-    transition: $transition;
-    transform: $transform;
-    border-radius: $radius4;
-    background-color: $color4;
+@mixin transition-check($color-tertiary){
+    transition: all 400ms ease-in-out;
+    transform: rotate(360deg);
+    border-radius: 20px;
+    background-color: #fff;
     color: $color-tertiary;
 }
 
 //Icone Check
-@mixin menu-check($display, $align, $size, $color4, $overflow){
-    display: $display;
-    align-self: $align;
-    font-size: $size;
-    color: $color4;
-    overflow: $overflow;
+@mixin menu-check{
+    display: flex;
+    align-self: center;
+    font-size: 1.2rem;
+    color: #fff;
+    overflow: hidden;
 }
 
 //Masque texte du menu
-@mixin ellipsis ($overflow, $white-space, $text-overflow){
-    $overflow: $overflow;
-    $white-space: $white-space;
-    $text-overflow: $text-overflow;
+@mixin ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 //Bouton Commande
-@mixin commande($margin3, $height4, $radius, $width5, $color4, $pointer, $border){
-    margin-top: $margin3;
-    height: $height4;
-    border-radius: $radius;
-    width: $width5;
-    color:$color4;
-    cursor: $pointer;
-    border: $border;
+@mixin commande{
+    margin-top: 50px;
+    height: 6vh;
+    border-radius: 30px;
+    width: 200px;
+    color:#fff;
+    cursor: pointer;
+    border: none;
 }
