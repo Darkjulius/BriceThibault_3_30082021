@@ -327,6 +327,95 @@ body {
   }
 }
 
+@keyframes animation__spiner {
+  to {
+    visibility: hidden;
+    display: none;
+  }
+}
+@keyframes spiner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes anim_text {
+  0% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+.animation-loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: visible;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  z-index: 15;
+  animation: animation__spiner 1s 1s forwards;
+}
+
+/* Logo */
+.loading-spinner-logo {
+  font-size: 1.6rem;
+  font-family: "Shrikhand";
+  color: #000;
+  position: absolute;
+  animation: anim_text 800ms infinite backwards;
+}
+
+/* Ligne circulaire bleu-magenta */
+.loading-spinner {
+  display: block;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  border-top: 5px solid #9356cd;
+  animation: spiner 2s linear 200ms infinite;
+}
+
+.loading-spinner::before,
+.loading-spinner::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 5px solid transparent;
+}
+
+/* Ligne circulaire magenta */
+.loading-spinner::before {
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-top-color: #ff79da;
+  animation: spiner 1s linear 600ms infinite;
+}
+
+/* Ligne circulaire vert clair */
+.loading-spinner::after {
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-top-color: #99e2D0;
+  animation: spiner 1s linear infinite;
+}
+
 @media screen and (min-width: 375px) {
   .localisation {
     display: flex;

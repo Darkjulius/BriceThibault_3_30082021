@@ -18,6 +18,65 @@
     }
 }
 
+//LOADING SPINNER DE LA PAGE index.html
+@keyframes animation__spiner{
+    to {
+      visibility: hidden;
+      display: none;
+    }
+  }
+@keyframes spiner{
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+@keyframes anim_text {
+    0% {
+      transform: rotate(10deg);
+    }
+    50% {
+      transform: rotate(-10deg);
+    }
+    100% {
+      transform: rotate(10deg);
+    }
+}
+
+.animation-loading-spinner {
+    @include loading-spinner;
+}
+
+  /* Logo */
+.loading-spinner-logo {
+    @include loading-spinner-logo;
+}
+
+/* Ligne circulaire bleu-magenta */
+.loading-spinner {
+    @include color-primary;
+}
+
+.loading-spinner::before,
+.loading-spinner::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 5px solid transparent;
+}
+
+/* Ligne circulaire magenta */
+.loading-spinner::before {
+    @include color-secondary;
+}
+  
+/* Ligne circulaire vert clair */
+.loading-spinner::after {
+    @include color-tertiary
+}
+
 //SECTION LOCALISATION de la page index.html
 .localisation{
     @media screen and (min-width: 375px){
