@@ -12,11 +12,7 @@
     padding: 0px;
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 75aa4e7b9e7c03d8b0114df82aafb7e78abb5964
-//LOADING SPINNER
+//LOADING SPINNER-Complet
 @mixin loading-spinner{
     display: $display;
     justify-content: center;
@@ -69,7 +65,6 @@
     animation: spiner 1s linear infinite;
 }
 
-<<<<<<< HEAD
 //Remplissage des coeurs.
 @mixin heart-full($color-secondary, $color-primary){
     animation: animation_heart 600ms linear alternate both;
@@ -80,10 +75,6 @@
     font-weight: 600;
     color: transparent;
 }
-=======
-
-
->>>>>>> 75aa4e7b9e7c03d8b0114df82aafb7e78abb5964
 
 // MIXINS DE LA PAGE index.html
 
