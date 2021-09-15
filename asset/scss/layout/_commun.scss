@@ -88,7 +88,7 @@ body{
 .menu-image{
     @media screen and (min-width: 375px){
         img{
-            width: 100%;
+            max-width: 100%;
         }
     }
 }
@@ -243,16 +243,20 @@ body{
         margin-top: 0;
     }
     .command{
-        margin-top: 90px !important;
+        margin-top: 45px !important;
     }
 }
 @media screen and (min-width: 960px){
+<<<<<<< HEAD
 
+=======
+>>>>>>> 75aa4e7b9e7c03d8b0114df82aafb7e78abb5964
     .menu-image img{
         width: 100%;
         height: 500px;
         object-fit: cover;
     }
+
     .cards-menu{
        display: $display !important;
        justify-content: space-around;
@@ -265,5 +269,8 @@ body{
     }
     .card .cards-entrees-title-trait{
         width: 94% !important;
+    }
+    .command{
+        margin-top: 50px !important;
     }
 }
