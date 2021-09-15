@@ -241,9 +241,6 @@ body{
     }
 }
 @media screen and (min-width: 960px){
-    .card{
-        bottom: 250px;
-    }
     .cards-menu{
        display: $display !important;
        justify-content: space-around;
