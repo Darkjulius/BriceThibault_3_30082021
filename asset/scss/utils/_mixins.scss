@@ -12,6 +12,70 @@
     padding: 0px;
 }
 
+//LOADING SPINNER
+@mixin loading-spinner{
+    display: $display;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    z-index: 15;
+    animation: animation__spiner 1s 1s forwards;
+}
+//LOADING SPINNER - Animation Logo
+@mixin loading-spinner-logo{
+    font-size: 1.6rem;
+    font-family: $policy;
+    color: #000;
+    position: absolute;
+    animation: anim_text 800ms infinite backwards;
+}
+//LOADING SPINNER - Ligne bleu-magenta (Couleur Primaire).
+@mixin color-primary{
+    display: block;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-top: 5px solid $color-primary;
+    animation: spiner 2s linear 200ms infinite;
+}
+//LOADING SPINNER - Ligne magenta (Couleur Secondaire).
+@mixin color-secondary{
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-top-color: $color-secondary;
+    animation: spiner 1s linear 600ms infinite;
+}
+//LOADING SPINNER - Ligne Cyan (Couleur Tertiaire).
+@mixin color-tertiary{
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-top-color: $color-tertiary;
+    animation: spiner 1s linear infinite;
+}
+
+//Remplissage des coeurs.
+@mixin heart-full($color-secondary, $color-primary){
+    animation: animation_heart 600ms linear alternate both;
+    background: linear-gradient(to bottom, $color-secondary, $color-primary);
+    -webkit-background-clip: text;
+    -o-background-clip: text;
+    -moz-background-clip: text;
+    font-weight: 600;
+    color: transparent;
+}
+
 // MIXINS DE LA PAGE index.html
 
 //Design des 2 premiers boutons (section Fonctionnement) de la page index.html
@@ -93,6 +157,9 @@
     font-size: 0.90em;
 }
 
+
+
+
 // MIXINS DES DIFFERENTES PAGES MENUS POUR CHAQUES RESTAURANTS
 
 //Menus
@@ -160,6 +227,7 @@
 //Bouton Commande
 @mixin commande{
     margin-top: 50px;
+    margin-bottom: 83px;
     height: 6vh;
     border-radius: 30px;
     width: 200px;

@@ -18,6 +18,65 @@
     }
 }
 
+//LOADING SPINNER DE LA PAGE index.html
+@keyframes animation__spiner{
+    to {
+      visibility: hidden;
+      display: none;
+    }
+  }
+@keyframes spiner{
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+@keyframes anim_text {
+    0% {
+      transform: rotate(10deg);
+    }
+    50% {
+      transform: rotate(-10deg);
+    }
+    100% {
+      transform: rotate(10deg);
+    }
+}
+
+.animation-loading-spinner {
+    @include loading-spinner;
+}
+
+  /* Logo */
+.loading-spinner-logo {
+    @include loading-spinner-logo;
+}
+
+/* Ligne circulaire bleu-magenta */
+.loading-spinner {
+    @include color-primary;
+}
+
+.loading-spinner::before,
+.loading-spinner::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 5px solid transparent;
+}
+
+/* Ligne circulaire magenta */
+.loading-spinner::before {
+    @include color-secondary;
+}
+  
+/* Ligne circulaire vert clair */
+.loading-spinner::after {
+    @include color-tertiary
+}
+
 //SECTION LOCALISATION de la page index.html
 .localisation{
     @media screen and (min-width: 375px){
@@ -196,20 +255,25 @@
             display: $display;
             flex-direction: column;
             justify-content: center;
-            width: 5%;
+            width: 8%;
             margin: auto 0px;
         }
-        .icon-heart{
+        .restaurant-icon{
             font-size: 1.5em;
             position: absolute;
+            right: 21px;
         }
-        i:active{
-            font-weight: 600;
-            color: transparent;
-            background: linear-gradient(#9356DC, #FF79DA);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            transition: all 500ms ease-in-out;
+        .restaurant-icon:active .heart-full{
+            @include heart-full($color-secondary, $color-primary);
+        }
+        
+        @keyframes animation_heart {
+            0% {
+              transform: scale(0.1);
+            }
+            100% {
+              transform: scale(1.1);
+            }
         }
     }
 }
