@@ -12,8 +12,7 @@
     padding: 0px;
 }
 
-
-//LOADING SPINNER
+//LOADING SPINNER-Complet
 @mixin loading-spinner{
     display: $display;
     justify-content: center;
@@ -28,13 +27,13 @@
     z-index: 15;
     animation: animation__spiner 1s 1s forwards;
 }
-//LOADING SPINNER - Animation Logo
+// LOADING SPINNER - Animation Logo
 @mixin loading-spinner-logo{
     font-size: 1.6rem;
     font-family: $policy;
     color: #000;
     position: absolute;
-    animation: anim_text 800ms infinite backwards;
+    animation: anim_text 800ms infinite;
 }
 //LOADING SPINNER - Ligne bleu-magenta (Couleur Primaire).
 @mixin color-primary{
@@ -66,8 +65,16 @@
     animation: spiner 1s linear infinite;
 }
 
-
-
+//Remplissage des coeurs.
+@mixin heart-full($color-secondary, $color-primary){
+    animation: animation_heart 600ms linear alternate both;
+    background: linear-gradient(to bottom, $color-secondary, $color-primary);
+    -webkit-background-clip: text;
+    -o-background-clip: text;
+    -moz-background-clip: text;
+    font-weight: 600;
+    color: transparent;
+}
 
 // MIXINS DE LA PAGE index.html
 
@@ -150,6 +157,9 @@
     font-size: 0.90em;
 }
 
+
+
+
 // MIXINS DES DIFFERENTES PAGES MENUS POUR CHAQUES RESTAURANTS
 
 //Menus
@@ -164,7 +174,7 @@
     border-radius: 20px;
     box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
     margin-bottom: 15px;
-    padding-left: 0 23px;
+    // padding: 0 23px;
     align-items: center;
 }
 
@@ -217,6 +227,7 @@
 //Bouton Commande
 @mixin commande{
     margin-top: 50px;
+    margin-bottom: 83px;
     height: 6vh;
     border-radius: 30px;
     width: 200px;

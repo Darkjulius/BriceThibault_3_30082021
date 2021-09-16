@@ -5,6 +5,7 @@ body{
     @include dim-pages;
 }
 
+
 //FOOTER de toutes les pages
 .footer{
     @media screen and (min-width: 375px){
@@ -20,7 +21,7 @@ body{
         }
         .footer-menu li{
             list-style: none;
-            padding-bottom: 7px;
+            padding-bottom: 9px;
         }
         .footer-menu li a {
             color: $color;
@@ -103,31 +104,41 @@ body{
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
     }
+
+    .card-title{
+        font-size: .9em;
+    }
+
     .card-title-icon{
         margin: 0 14px;
         padding-top: 35px;
         font-family: $policy;
-        padding-bottom: 36px;
         display: $display;
     }
+
     .card-icon{
         font-size: 1.5em;
         margin: auto 0px;
-        position: relative;
-        left: 20%;
+        position: absolute;
+        left: 84%;
+        top: 3%
     }
-    i:active{
-        font-weight: 600;
-        color: transparent;
-        background: linear-gradient(#9356DC, #FF79DA);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        transition: all 500ms ease-in-out;
+    
+    .card-icon:active .heart-full{
+        @include heart-full($color-secondary, $color-primary);
     }
+    @keyframes animation_heart {
+        0% {
+          transform: scale(0.1);
+        }
+        100% {
+          transform: scale(1.1);
+        }
+    }
+
     .cards-menu{
         display: grid;
         grid-template-rows: repeat(3, 1fr);
-        align-items: $align;
     }
         &.cards-entrees{
             grid-area: entrees;
@@ -148,7 +159,7 @@ body{
         margin-left: 14px;
         padding-bottom: 5px;
     }
-    .cards-desserts, .cards-plats{
+    .cards-entrees, .cards-desserts, .cards-plats{
         margin-top: 44px;
     }
     .cards-entrees-title-trait{
@@ -175,11 +186,13 @@ body{
     .card-name{
         grid-area: nom;
         padding: 10px 10px 0 10px;
+        font-size: 18px;
         
     }
     .card-description{
         grid-area: description;
         padding: 10px 0px 10px 10px;
+        font-size: 15px;
         
     }
     .card-name, .card-description{
@@ -188,6 +201,7 @@ body{
     .card-price{
         grid-area: prix;
         padding-right: 23px;
+        font-size: 15px;
     }
     .card-check{
         grid-area: check;
@@ -214,8 +228,13 @@ body{
     }
 }
 
-@media screen and (min-width: 600px){
-    
+@media screen and (min-width: 760px){
+    .menu-image img{
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+    }
+
     .card-title-icon{
         justify-content: center;
     }
@@ -233,14 +252,11 @@ body{
     .card .cards-entrees-title-trait{
         width: 91% !important;
     }
-    .card .cards-plats{
-        margin-top: 0;
-    }
     .command{
         margin-top: 45px !important;
     }
 }
-@media screen and (min-width: 960px){
+@media screen and (min-width: 1140px){
     .menu-image img{
         width: 100%;
         height: 500px;
@@ -250,9 +266,6 @@ body{
     .cards-menu{
        display: $display !important;
        justify-content: space-around;
-    }
-    .card .cards-desserts{
-        margin-top: 0;
     }
     .cards-entrees, .cards-plats, .cards-desserts{
         width: 33%;
