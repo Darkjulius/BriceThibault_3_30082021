@@ -1,11 +1,12 @@
 body{
     font-family: $policy-text;
 }
+
 *{
     @include dim-pages;
 }
 
-//FOOTER de toutes les pages
+/*FOOTER de toutes les pages*/
 .footer{
     @media screen and (min-width: 375px){
      background-color: #353535;
@@ -13,19 +14,23 @@ body{
         .footer-infos{
             padding: 0px 20px 38px 20px;
         }
+
         .footer-title{
             font-family: $policy;
             font-weight: normal;
             padding: 27px 0;
         }
+
         .footer-menu li{
             list-style: none;
             padding-bottom: 9px;
         }
+
         .footer-menu li a {
             color: $color;
             text-decoration: none;
         }
+
         .footer-infos-icon-design{
             margin-right: 15px;
             display: inline-block;
@@ -41,14 +46,17 @@ body{
         .footer-title{
             text-align: $align;
         }
+
         .footer-menu{
             display: $display2;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
         }
+
         .footer-menu li{
             padding-bottom: 0px;
         }
+
         .liste-1, .liste-2, .liste-3, .liste-4{
             display: $display;
             justify-content: center;
@@ -61,6 +69,7 @@ body{
         .footer-title{
             text-align: $align;
         }
+
         .footer-menu{
             display: $display;
             justify-content: space-around;
@@ -68,7 +77,7 @@ body{
     }
 }
 
-// HEADER des pages menus
+/*HEADER des pages menus*/
 .header{
     @media screen and (min-width: 375px){
         @include flexible;
@@ -78,13 +87,21 @@ body{
             position: absolute;
             left: 5%;
         }
+
         .header-logo{
             font-size: 2em;
+            display: $display;
+            justify-content: $align;
+        }
+
+        .logo{
+            width: 50%;
+            height: auto;
         }
     }
  }
 
-//IMAGE de la carte du menu
+/*IMAGE de la carte du menu*/
 .menu-image{
     @media screen and (min-width: 375px){
         img{
@@ -93,7 +110,7 @@ body{
     }
 }
 
-//MENU de la carte
+/*MENU de la carte*/
 .card{
     @media screen and (min-width: 375px){
         position: relative;
@@ -103,22 +120,28 @@ body{
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
     }
+
+    .card-title{
+        font-size: .9em;
+    }
+
     .card-title-icon{
         margin: 0 14px;
         padding-top: 35px;
         font-family: $policy;
-        padding-bottom: 36px;
         display: $display;
     }
 
     .card-icon{
         font-size: 1.5em;
         margin: auto 0px;
-        position: relative;
-        left: 20%;
+        position: absolute;
+        left: 84%;
+        top: 3%
     }
     
     .card-icon:active .heart-full{
+    /*Animation remplissage du coeur au clic + mixin*/
         @include heart-full($color-secondary, $color-primary);
     }
     @keyframes animation_heart {
@@ -133,7 +156,6 @@ body{
     .cards-menu{
         display: grid;
         grid-template-rows: repeat(3, 1fr);
-        align-items: $align;
     }
         &.cards-entrees{
             grid-area: entrees;
@@ -148,20 +170,26 @@ body{
     .cards-title{
         padding-bottom: 10px;
     }
+
     .cards-title h2{
         font-size: 1em;
         font-weight: 400;
         margin-left: 14px;
         padding-bottom: 5px;
     }
-    .cards-desserts, .cards-plats{
+
+    .cards-entrees, .cards-desserts, .cards-plats{
         margin-top: 44px;
     }
+
     .cards-entrees-title-trait{
+    /*Surlignement par un trait vert des mots Entrées, Plats et Desserts */
         @include trait-vert ($color-tertiary);
         margin-bottom: 6px
     }
+
     .card-items{
+    /*Apparition du menu progressivement + mixin + keyframes apparition*/
         @include menu;
         animation: apparition ease-in-out 1500ms backwards;
     }
@@ -178,37 +206,49 @@ body{
             opacity: 1;
         }
     }
+
     .card-name{
         grid-area: nom;
         padding: 10px 10px 0 10px;
-        
+        font-size: 18px; 
     }
+
     .card-description{
         grid-area: description;
         padding: 10px 0px 10px 10px;
-        
+        font-size: 15px;
     }
+
     .card-name, .card-description{
+    /*Lors de l'apparition de l'icone check, ce qu'il écrase (mots) est remplacé par des points */
         @include ellipsis
     }
+
     .card-price{
         grid-area: prix;
         padding-right: 23px;
+        font-size: 15px;
     }
+
     .card-check{
+    /*Animation pour faire apparaitre le système de choix "Check" pour valider une entrée, un plat et un déssert*/
         grid-area: check;
         @include check($color-tertiary);
     }
+
     .card-items:hover .card-check{
         width: 73px;
     }
+
     .card-items:hover .icon-check{
         @include transition-check($color-tertiary);
         padding: 3px;
     }
+
     .icon-check{
         @include menu-check;
     }
+
     .button-command{
         display: flex;
         justify-content: center;
@@ -219,34 +259,39 @@ body{
         }
     }
 }
+@media screen and (min-width: 760px){
+    .menu-image img{
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+    }
 
-@media screen and (min-width: 600px){
-    
     .card-title-icon{
         justify-content: center;
     }
+
     .card-icon{
         position: unset !important;
         padding-left: 30px;
     }
+
     .cards-menu{
         grid-template-rows: repeat(2, 1fr) !important;
         grid-template-columns: repeat(2, 1fr);
     }
+
     .cards-title h2{
         text-align: center;
     }
     .card .cards-entrees-title-trait{
-        width: 91% !important;
+        width: 95% !important;
     }
-    .card .cards-plats{
-        margin-top: 0;
-    }
+
     .command{
         margin-top: 45px !important;
     }
 }
-@media screen and (min-width: 960px){
+@media screen and (min-width: 1140px){
     .menu-image img{
         width: 100%;
         height: 500px;
@@ -257,15 +302,15 @@ body{
        display: $display !important;
        justify-content: space-around;
     }
-    .card .cards-desserts{
-        margin-top: 0;
-    }
+
     .cards-entrees, .cards-plats, .cards-desserts{
         width: 33%;
     }
+
     .card .cards-entrees-title-trait{
         width: 94% !important;
     }
+    
     .command{
         margin-top: 50px !important;
     }
