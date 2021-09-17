@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body {
   font-family: "Roboto";
 }
@@ -9,7 +8,6 @@ body {
   padding: 0px;
 }
 
-/*FOOTER de toutes les pages*/
 @media screen and (min-width: 375px) {
   .footer {
     background-color: #353535;
@@ -70,7 +68,6 @@ body {
   }
 }
 
-/*HEADER des pages menus*/
 @media screen and (min-width: 375px) {
   .header {
     display: flex;
@@ -86,23 +83,15 @@ body {
   }
   .header .header-logo {
     font-size: 2em;
-    display: flex;
-    justify-content: center;
-  }
-  .header .logo {
-    width: 50%;
-    height: auto;
   }
 }
 
-/*IMAGE de la carte du menu*/
 @media screen and (min-width: 375px) {
   .menu-image img {
     max-width: 100%;
   }
 }
 
-/*MENU de la carte*/
 @media screen and (min-width: 375px) {
   .card {
     position: relative;
@@ -113,24 +102,20 @@ body {
     border-top-right-radius: 20px;
   }
 }
-.card .card-title {
-  font-size: 0.9em;
-}
 .card .card-title-icon {
   margin: 0 14px;
   padding-top: 35px;
   font-family: "Shrikhand";
+  padding-bottom: 36px;
   display: flex;
 }
 .card .card-icon {
   font-size: 1.5em;
   margin: auto 0px;
-  position: absolute;
-  left: 84%;
-  top: 3%;
+  position: relative;
+  left: 20%;
 }
 .card .card-icon:active .heart-full {
-  /*Animation remplissage du coeur au clic + mixin*/
   animation: animation_heart 600ms linear alternate both;
   background: linear-gradient(to bottom, #ff79da, #9356cd);
   -webkit-background-clip: text;
@@ -150,6 +135,7 @@ body {
 .card .cards-menu {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
+  align-items: center;
 }
 .card.cards-entrees {
   grid-area: entrees;
@@ -169,11 +155,10 @@ body {
   margin-left: 14px;
   padding-bottom: 5px;
 }
-.card .cards-entrees, .card .cards-desserts, .card .cards-plats {
+.card .cards-desserts, .card .cards-plats {
   margin-top: 44px;
 }
 .card .cards-entrees-title-trait {
-  /*Surlignement par un trait vert des mots Entrées, Plats et Desserts */
   background-color: #99e2D0;
   height: 0.7vh;
   width: 40px;
@@ -181,7 +166,6 @@ body {
   margin-bottom: 6px;
 }
 .card .card-items {
-  /*Apparition du menu progressivement + mixin + keyframes apparition*/
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr auto auto;
@@ -192,6 +176,7 @@ body {
   border-radius: 20px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   margin-bottom: 15px;
+  padding-left: 0 23px;
   align-items: center;
   animation: apparition ease-in-out 1500ms backwards;
 }
@@ -211,15 +196,12 @@ body {
 .card .card-name {
   grid-area: nom;
   padding: 10px 10px 0 10px;
-  font-size: 18px;
 }
 .card .card-description {
   grid-area: description;
   padding: 10px 0px 10px 10px;
-  font-size: 15px;
 }
 .card .card-name, .card .card-description {
-  /*Lors de l'apparition de l'icone check, ce qu'il écrase (mots) est remplacé par des points */
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -227,10 +209,8 @@ body {
 .card .card-price {
   grid-area: prix;
   padding-right: 23px;
-  font-size: 15px;
 }
 .card .card-check {
-  /*Animation pour faire apparaitre le système de choix "Check" pour valider une entrée, un plat et un déssert*/
   grid-area: check;
   display: flex;
   flex-flow: nowrap row;
@@ -277,20 +257,7 @@ body {
   background: linear-gradient(0deg, #9356cd, #ff79da);
 }
 
-@media screen and (min-width: 760px) {
-  .menu-image img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-  }
-}
-@media screen and (min-width: 760px) and (min-width: 760px) {
-  .menu-image img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-  }
-
+@media screen and (min-width: 600px) {
   .card-title-icon {
     justify-content: center;
   }
@@ -310,14 +277,18 @@ body {
   }
 
   .card .cards-entrees-title-trait {
-    width: 95% !important;
+    width: 91% !important;
+  }
+
+  .card .cards-plats {
+    margin-top: 0;
   }
 
   .command {
     margin-top: 45px !important;
   }
 }
-@media screen and (min-width: 760px) and (min-width: 1140px) {
+@media screen and (min-width: 960px) {
   .menu-image img {
     width: 100%;
     height: 500px;
@@ -328,8 +299,23 @@ body {
     display: flex !important;
     justify-content: space-around;
   }
+
+  .card .cards-desserts {
+    margin-top: 0;
+  }
+
+  .cards-entrees, .cards-plats, .cards-desserts {
+    width: 33%;
+  }
+
+  .card .cards-entrees-title-trait {
+    width: 94% !important;
+  }
+
+  .command {
+    margin-top: 50px !important;
+  }
 }
-/*HEADER DE LA PAGE index.html*/
 @media screen and (min-width: 375px) {
   .header-index {
     background-color: #fff;
@@ -351,7 +337,6 @@ body {
   }
 }
 
-/*LOADING SPINNER DE LA PAGE index.html*/
 @keyframes animation__spiner {
   to {
     visibility: hidden;
@@ -368,10 +353,13 @@ body {
 }
 @keyframes anim_text {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-10deg);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(10deg);
   }
 }
 .animation-loading-spinner {
@@ -395,7 +383,7 @@ body {
   font-family: "Shrikhand";
   color: #000;
   position: absolute;
-  animation: anim_text 800ms infinite;
+  animation: anim_text 800ms infinite backwards;
 }
 
 /* Ligne circulaire bleu-magenta */
@@ -438,7 +426,6 @@ body {
   animation: spiner 1s linear infinite;
 }
 
-/*SECTION LOCALISATION de la page index.html*/
 @media screen and (min-width: 375px) {
   .localisation {
     display: flex;
@@ -468,7 +455,6 @@ body {
   opacity: 1;
 }
 
-/*SECTION RESERVATION de la page index.html*/
 @media screen and (min-width: 375px) {
   .booking {
     display: flex;
@@ -505,13 +491,11 @@ body {
     transition: opacity 600ms ease-in-out;
   }
   .booking .explorer:hover {
-    /*Mixin adoucissement du bouton*/
     opacity: 0.5;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
   }
 }
 
-/*SECTION FONCTIONNEMENT de la page index.html*/
 @media screen and (min-width: 375px) {
   .operations {
     margin: 0 20px 38px 20px;
@@ -550,7 +534,6 @@ body {
     transition: opacity 600ms ease-in-out;
   }
   .operations .operation:hover {
-    /*Mixin adoucissement du bouton*/
     opacity: 0.5;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
   }
@@ -614,7 +597,6 @@ body {
   }
 }
 
-/*SECTION RESTAURANTS de la page index.html*/
 @media screen and (min-width: 375px) {
   .restaurants {
     background-color: #f6f6f6;
@@ -673,13 +655,13 @@ body {
     justify-content: center;
     width: 10%;
     margin: auto 0px;
+  }
+  .restaurants .restaurant-icon {
     font-size: 1.5em;
     position: absolute;
     right: 21px;
-    bottom: 27px;
   }
   .restaurants .restaurant-icon:active .heart-full {
-    /*Animation remplissage du coeur au clic + mixin*/
     animation: animation_heart 600ms linear alternate both;
     background: linear-gradient(to bottom, #ff79da, #9356cd);
     -webkit-background-clip: text;

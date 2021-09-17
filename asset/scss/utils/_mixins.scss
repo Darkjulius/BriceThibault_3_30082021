@@ -27,13 +27,13 @@
     z-index: 15;
     animation: animation__spiner 1s 1s forwards;
 }
-// LOADING SPINNER - Animation Logo
+//LOADING SPINNER - Animation Logo
 @mixin loading-spinner-logo{
     font-size: 1.6rem;
     font-family: $policy;
     color: #000;
     position: absolute;
-    animation: anim_text 800ms infinite;
+    animation: anim_text 800ms infinite backwards;
 }
 //LOADING SPINNER - Ligne bleu-magenta (Couleur Primaire).
 @mixin color-primary{
@@ -174,7 +174,7 @@
     border-radius: 20px;
     box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
     margin-bottom: 15px;
-    // padding: 0 23px;
+    padding-left: 0 23px;
     align-items: center;
 }
 
