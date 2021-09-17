@@ -553,10 +553,10 @@ body {
     margin-left: 15px;
     margin-bottom: 30px;
     z-index: 1;
-    /*Adoucissement des 3 boutons (Choix, Composition et Dégustation) au survol du curseur de la souris sur la bouton.*/
     transition: opacity 600ms ease-in-out;
   }
   .operations .operation:hover {
+    /*Adoucissement des 3 boutons (Choix, Composition et Dégustation) au survol du curseur de la souris sur la bouton.*/
     opacity: 0.5;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
   }

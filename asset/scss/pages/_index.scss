@@ -155,9 +155,9 @@
         }
         .operation{
             @include buttons-fonctionnement;
-            /*Adoucissement des 3 boutons (Choix, Composition et Dégustation) au survol du curseur de la souris sur la bouton.*/
             transition: opacity 600ms ease-in-out;
                 &:hover{
+                /*Adoucissement des 3 boutons (Choix, Composition et Dégustation) au survol du curseur de la souris sur la bouton.*/
                     @include button-main;
                 }
                 &.color{
