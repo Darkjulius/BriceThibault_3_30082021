@@ -83,6 +83,12 @@ body {
   }
   .header .header-logo {
     font-size: 2em;
+    display: flex;
+    justify-content: center;
+  }
+  .header .logo {
+    width: 50%;
+    height: auto;
   }
 }
 

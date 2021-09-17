@@ -81,6 +81,12 @@ body{
         }
         .header-logo{
             font-size: 2em;
+            display: $display;
+            justify-content: $align;
+        }
+        .logo{
+            width: 50%;
+            height: auto;
         }
     }
  }
