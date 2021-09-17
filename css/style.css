@@ -283,6 +283,13 @@ body {
     height: 500px;
     object-fit: cover;
   }
+}
+@media screen and (min-width: 760px) and (min-width: 760px) {
+  .menu-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
 
   .card-title-icon {
     justify-content: center;
@@ -310,7 +317,7 @@ body {
     margin-top: 45px !important;
   }
 }
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 760px) and (min-width: 1140px) {
   .menu-image img {
     width: 100%;
     height: 500px;
@@ -320,18 +327,6 @@ body {
   .cards-menu {
     display: flex !important;
     justify-content: space-around;
-  }
-
-  .cards-entrees, .cards-plats, .cards-desserts {
-    width: 33%;
-  }
-
-  .card .cards-entrees-title-trait {
-    width: 94% !important;
-  }
-
-  .command {
-    margin-top: 50px !important;
   }
 }
 /*HEADER DE LA PAGE index.html*/
