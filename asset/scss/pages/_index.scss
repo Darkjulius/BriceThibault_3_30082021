@@ -35,13 +35,10 @@
 }
 @keyframes anim_text {
     0% {
-      transform: rotate(10deg);
-    }
-    50% {
-      transform: rotate(-10deg);
+      transform: rotate(0deg);
     }
     100% {
-      transform: rotate(10deg);
+      transform: rotate(360deg);
     }
 }
 
@@ -257,11 +254,10 @@
             justify-content: center;
             width: 10%;
             margin: auto 0px;
-        }
-        .restaurant-icon{
             font-size: 1.5em;
             position: absolute;
             right: 21px;
+            bottom: 27px;
         }
         .restaurant-icon:active .heart-full{
             @include heart-full($color-secondary, $color-primary);

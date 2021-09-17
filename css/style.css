@@ -102,18 +102,21 @@ body {
     border-top-right-radius: 20px;
   }
 }
+.card .card-title {
+  font-size: 0.9em;
+}
 .card .card-title-icon {
   margin: 0 14px;
   padding-top: 35px;
   font-family: "Shrikhand";
-  padding-bottom: 36px;
   display: flex;
 }
 .card .card-icon {
   font-size: 1.5em;
   margin: auto 0px;
-  position: relative;
-  left: 20%;
+  position: absolute;
+  left: 84%;
+  top: 3%;
 }
 .card .card-icon:active .heart-full {
   animation: animation_heart 600ms linear alternate both;
@@ -135,7 +138,6 @@ body {
 .card .cards-menu {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
-  align-items: center;
 }
 .card.cards-entrees {
   grid-area: entrees;
@@ -155,7 +157,7 @@ body {
   margin-left: 14px;
   padding-bottom: 5px;
 }
-.card .cards-desserts, .card .cards-plats {
+.card .cards-entrees, .card .cards-desserts, .card .cards-plats {
   margin-top: 44px;
 }
 .card .cards-entrees-title-trait {
@@ -176,7 +178,6 @@ body {
   border-radius: 20px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   margin-bottom: 15px;
-  padding-left: 0 23px;
   align-items: center;
   animation: apparition ease-in-out 1500ms backwards;
 }
@@ -196,10 +197,12 @@ body {
 .card .card-name {
   grid-area: nom;
   padding: 10px 10px 0 10px;
+  font-size: 18px;
 }
 .card .card-description {
   grid-area: description;
   padding: 10px 0px 10px 10px;
+  font-size: 15px;
 }
 .card .card-name, .card .card-description {
   overflow: hidden;
@@ -209,6 +212,7 @@ body {
 .card .card-price {
   grid-area: prix;
   padding-right: 23px;
+  font-size: 15px;
 }
 .card .card-check {
   grid-area: check;
@@ -257,7 +261,13 @@ body {
   background: linear-gradient(0deg, #9356cd, #ff79da);
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 760px) {
+  .menu-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
+
   .card-title-icon {
     justify-content: center;
   }
@@ -277,18 +287,14 @@ body {
   }
 
   .card .cards-entrees-title-trait {
-    width: 91% !important;
-  }
-
-  .card .cards-plats {
-    margin-top: 0;
+    width: 95% !important;
   }
 
   .command {
     margin-top: 45px !important;
   }
 }
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1140px) {
   .menu-image img {
     width: 100%;
     height: 500px;
@@ -298,10 +304,6 @@ body {
   .cards-menu {
     display: flex !important;
     justify-content: space-around;
-  }
-
-  .card .cards-desserts {
-    margin-top: 0;
   }
 
   .cards-entrees, .cards-plats, .cards-desserts {
@@ -353,13 +355,10 @@ body {
 }
 @keyframes anim_text {
   0% {
-    transform: rotate(10deg);
-  }
-  50% {
-    transform: rotate(-10deg);
+    transform: rotate(0deg);
   }
   100% {
-    transform: rotate(10deg);
+    transform: rotate(360deg);
   }
 }
 .animation-loading-spinner {
@@ -383,7 +382,7 @@ body {
   font-family: "Shrikhand";
   color: #000;
   position: absolute;
-  animation: anim_text 800ms infinite backwards;
+  animation: anim_text 800ms infinite;
 }
 
 /* Ligne circulaire bleu-magenta */
@@ -655,11 +654,10 @@ body {
     justify-content: center;
     width: 10%;
     margin: auto 0px;
-  }
-  .restaurants .restaurant-icon {
     font-size: 1.5em;
     position: absolute;
     right: 21px;
+    bottom: 27px;
   }
   .restaurants .restaurant-icon:active .heart-full {
     animation: animation_heart 600ms linear alternate both;
