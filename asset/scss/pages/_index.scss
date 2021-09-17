@@ -1,4 +1,4 @@
-// HEADER DE LA PAGE index.html
+/*HEADER DE LA PAGE index.html*/
 .header-index{
     @media screen and (min-width: 375px){
         background-color: $color;
@@ -18,7 +18,7 @@
     }
 }
 
-//LOADING SPINNER DE LA PAGE index.html
+/*LOADING SPINNER DE LA PAGE index.html*/
 @keyframes animation__spiner{
     to {
       visibility: hidden;
@@ -46,7 +46,7 @@
     @include loading-spinner;
 }
 
-  /* Logo */
+/* Logo */
 .loading-spinner-logo {
     @include loading-spinner-logo;
 }
@@ -74,7 +74,7 @@
     @include color-tertiary
 }
 
-//SECTION LOCALISATION de la page index.html
+/*SECTION LOCALISATION de la page index.html*/
 .localisation{
     @media screen and (min-width: 375px){
         @include flexible;
@@ -101,7 +101,7 @@
     }
 }
 
-//SECTION RESERVATION de la page index.html
+/*SECTION RESERVATION de la page index.html*/
 .booking{
     @media screen and (min-width: 375px){
         @include flexible;
@@ -122,6 +122,7 @@
         }
             .explorer{
                 @include button-explorer;
+                /*Adoucissement du bouton Explorer au survol du curseur de la souris sur la bouton.*/
                 transition: opacity 600ms ease-in-out;
                 &:hover{
                     @include button-main;
@@ -130,7 +131,7 @@
     }
 }
 
-//SECTION FONCTIONNEMENT de la page index.html
+/*SECTION FONCTIONNEMENT de la page index.html*/
 .operations{
     @media screen and (min-width: 375px){
         margin: 0 20px 38px 20px;
@@ -154,6 +155,7 @@
         }
         .operation{
             @include buttons-fonctionnement;
+            /*Adoucissement des 3 boutons (Choix, Composition et Dégustation) au survol du curseur de la souris sur la bouton.*/
             transition: opacity 600ms ease-in-out;
                 &:hover{
                     @include button-main;
@@ -259,7 +261,9 @@
             right: 21px;
             bottom: 27px;
         }
+
         .restaurant-icon:active .heart-full{
+        /*Animation replissage du coeur au clic + mixin*/
             @include heart-full($color-secondary, $color-primary);
         }
         

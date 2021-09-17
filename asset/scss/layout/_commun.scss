@@ -6,7 +6,7 @@ body{
 }
 
 
-//FOOTER de toutes les pages
+/*FOOTER de toutes les pages*/
 .footer{
     @media screen and (min-width: 375px){
      background-color: #353535;
@@ -69,7 +69,7 @@ body{
     }
 }
 
-// HEADER des pages menus
+/* HEADER des pages menu*/
 .header{
     @media screen and (min-width: 375px){
         @include flexible;
@@ -91,7 +91,7 @@ body{
     }
  }
 
-//IMAGE de la carte du menu
+/*IMAGE de la carte du menu*/
 .menu-image{
     @media screen and (min-width: 375px){
         img{
@@ -100,7 +100,7 @@ body{
     }
 }
 
-//MENU de la carte
+/*MENU de la carte*/
 .card{
     @media screen and (min-width: 375px){
         position: relative;
@@ -131,6 +131,7 @@ body{
     }
     
     .card-icon:active .heart-full{
+    /*Animation replissage du coeur au clic + mixin*/
         @include heart-full($color-secondary, $color-primary);
     }
     @keyframes animation_heart {
@@ -169,10 +170,12 @@ body{
         margin-top: 44px;
     }
     .cards-entrees-title-trait{
+    /*Surlignement trait vert des titres Entrées, Plats et Desserts*/
         @include trait-vert ($color-tertiary);
         margin-bottom: 6px
     }
     .card-items{
+    /*Apparition du menu progressivement*/
         @include menu;
         animation: apparition ease-in-out 1500ms backwards;
     }
@@ -202,6 +205,8 @@ body{
         
     }
     .card-name, .card-description{
+    /*Lors de la sélection d'une entrée, un plat ou un dessert. Un système de coche apparait qui peut écraser un bout ou du texte.
+    Ce bout de texte ou texte est remplacé par l'attribut Ellipsis (trois petits points)*/
         @include ellipsis
     }
     .card-price{
@@ -209,6 +214,7 @@ body{
         padding-right: 23px;
         font-size: 15px;
     }
+
     .card-check{
         grid-area: check;
         @include check($color-tertiary);
@@ -217,6 +223,7 @@ body{
         width: 73px;
     }
     .card-items:hover .icon-check{
+    /*Apparition du système de coche lors du passage du curseur de la souris*/
         @include transition-check($color-tertiary);
         padding: 3px;
     }

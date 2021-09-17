@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "Roboto";
 }
@@ -8,6 +9,7 @@ body {
   padding: 0px;
 }
 
+/*FOOTER de toutes les pages*/
 @media screen and (min-width: 375px) {
   .footer {
     background-color: #353535;
@@ -68,6 +70,7 @@ body {
   }
 }
 
+/* HEADER des pages menu*/
 @media screen and (min-width: 375px) {
   .header {
     display: flex;
@@ -92,12 +95,14 @@ body {
   }
 }
 
+/*IMAGE de la carte du menu*/
 @media screen and (min-width: 375px) {
   .menu-image img {
     max-width: 100%;
   }
 }
 
+/*MENU de la carte*/
 @media screen and (min-width: 375px) {
   .card {
     position: relative;
@@ -125,6 +130,7 @@ body {
   top: 3%;
 }
 .card .card-icon:active .heart-full {
+  /*Animation replissage du coeur au clic + mixin*/
   animation: animation_heart 600ms linear alternate both;
   background: linear-gradient(to bottom, #ff79da, #9356cd);
   -webkit-background-clip: text;
@@ -167,6 +173,7 @@ body {
   margin-top: 44px;
 }
 .card .cards-entrees-title-trait {
+  /*Surlignement trait vert des titres Entrées, Plats et Desserts*/
   background-color: #99e2D0;
   height: 0.7vh;
   width: 40px;
@@ -174,6 +181,7 @@ body {
   margin-bottom: 6px;
 }
 .card .card-items {
+  /*Apparition du menu progressivement*/
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr auto auto;
@@ -211,6 +219,8 @@ body {
   font-size: 15px;
 }
 .card .card-name, .card .card-description {
+  /*Lors de la sélection d'une entrée, un plat ou un dessert. Un système de coche apparait qui peut écraser un bout ou du texte.
+  Ce bout de texte ou texte est remplacé par l'attribut Ellipsis (trois petits points)*/
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -236,6 +246,7 @@ body {
   width: 73px;
 }
 .card .card-items:hover .icon-check {
+  /*Apparition du système de coche lors du passage du curseur de la souris*/
   transition: all 400ms ease-in-out;
   transform: rotate(360deg);
   border-radius: 20px;
@@ -324,6 +335,7 @@ body {
     margin-top: 50px !important;
   }
 }
+/*HEADER DE LA PAGE index.html*/
 @media screen and (min-width: 375px) {
   .header-index {
     background-color: #fff;
@@ -345,6 +357,7 @@ body {
   }
 }
 
+/*LOADING SPINNER DE LA PAGE index.html*/
 @keyframes animation__spiner {
   to {
     visibility: hidden;
@@ -431,6 +444,7 @@ body {
   animation: spiner 1s linear infinite;
 }
 
+/*SECTION LOCALISATION de la page index.html*/
 @media screen and (min-width: 375px) {
   .localisation {
     display: flex;
@@ -460,6 +474,7 @@ body {
   opacity: 1;
 }
 
+/*SECTION RESERVATION de la page index.html*/
 @media screen and (min-width: 375px) {
   .booking {
     display: flex;
@@ -493,6 +508,7 @@ body {
     padding: 0 20px;
     width: 100%;
     height: 8vh;
+    /*Adoucissement du bouton Explorer au survol du curseur de la souris sur la bouton.*/
     transition: opacity 600ms ease-in-out;
   }
   .booking .explorer:hover {
@@ -501,6 +517,7 @@ body {
   }
 }
 
+/*SECTION FONCTIONNEMENT de la page index.html*/
 @media screen and (min-width: 375px) {
   .operations {
     margin: 0 20px 38px 20px;
@@ -536,6 +553,7 @@ body {
     margin-left: 15px;
     margin-bottom: 30px;
     z-index: 1;
+    /*Adoucissement des 3 boutons (Choix, Composition et Dégustation) au survol du curseur de la souris sur la bouton.*/
     transition: opacity 600ms ease-in-out;
   }
   .operations .operation:hover {
@@ -666,6 +684,7 @@ body {
     bottom: 27px;
   }
   .restaurants .restaurant-icon:active .heart-full {
+    /*Animation replissage du coeur au clic + mixin*/
     animation: animation_heart 600ms linear alternate both;
     background: linear-gradient(to bottom, #ff79da, #9356cd);
     -webkit-background-clip: text;
