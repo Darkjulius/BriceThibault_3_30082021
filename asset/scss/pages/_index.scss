@@ -1,4 +1,4 @@
-/*HEADER DE LA PAGE index.html*/
+/* HEADER DE LA PAGE index.html */
 .header-index{
     @media screen and (min-width: 375px){
         background-color: $color;
@@ -18,7 +18,7 @@
     }
 }
 
-/*LOADING SPINNER DE LA PAGE index.html*/
+/* LOADING SPINNER DE LA PAGE index.html */
 @keyframes animation__spiner{
     to {
       visibility: hidden;
@@ -74,7 +74,7 @@
     @include color-tertiary
 }
 
-/*SECTION LOCALISATION de la page index.html*/
+/* SECTION LOCALISATION de la page index.html */
 .localisation{
     @media screen and (min-width: 375px){
         @include flexible;

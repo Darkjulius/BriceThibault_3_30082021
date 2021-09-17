@@ -335,7 +335,7 @@ body {
     margin-top: 50px !important;
   }
 }
-/*HEADER DE LA PAGE index.html*/
+/* HEADER DE LA PAGE index.html */
 @media screen and (min-width: 375px) {
   .header-index {
     background-color: #fff;
@@ -357,7 +357,7 @@ body {
   }
 }
 
-/*LOADING SPINNER DE LA PAGE index.html*/
+/* LOADING SPINNER DE LA PAGE index.html */
 @keyframes animation__spiner {
   to {
     visibility: hidden;
@@ -444,7 +444,7 @@ body {
   animation: spiner 1s linear infinite;
 }
 
-/*SECTION LOCALISATION de la page index.html*/
+/* SECTION LOCALISATION de la page index.html */
 @media screen and (min-width: 375px) {
   .localisation {
     display: flex;
