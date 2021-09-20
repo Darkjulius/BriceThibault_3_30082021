@@ -1,6 +1,6 @@
 /* HEADER DE LA PAGE index.html */
  .header-index{
-    @media screen and (min-width: 375px){
+    @media screen and (min-width: 360px){
         background-color: $color;
         box-shadow: 0 0 15px rgb (0 0 0 / 100%);
         @include flexible;
@@ -76,7 +76,7 @@
 
 /* SECTION LOCALISATION de la page index.html */
 .localisation{
-    @media screen and (min-width: 375px){
+    @media screen and (min-width: 360px){
         @include flexible;
         background-color: #eaeaea;
         opacity: 0.8;
@@ -103,7 +103,7 @@
 
 /*SECTION RESERVATION de la page index.html*/
 .booking{
-    @media screen and (min-width: 375px){
+    @media screen and (min-width: 360px){
         @include flexible;
         background-color: #f6f6f6;
 
@@ -133,7 +133,7 @@
 
 /*SECTION FONCTIONNEMENT de la page index.html*/
 .operations{
-    @media screen and (min-width: 375px){
+    @media screen and (min-width: 360px){
         margin: 0 20px 38px 20px;
         background-color: $color;
 
@@ -217,7 +217,7 @@
 
 //SECTION RESTAURANTS de la page index.html
 .restaurants{
-    @media screen and (min-width: 375px){
+    @media screen and (min-width: 360px){
         background-color: #f6f6f6;
         padding: 59px 0 44px 0;
         .restaurants-title{

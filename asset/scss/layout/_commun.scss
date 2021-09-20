@@ -7,7 +7,7 @@ body{
 
 /*FOOTER de toutes les pages*/
 .footer{
-    @media screen and (min-width: 375px){
+    @media screen and (min-width: 360px){
      background-color: #353535;
      color: $color;
         .footer-infos{
@@ -70,7 +70,7 @@ body{
 
 /* HEADER des pages menu*/
 .header{
-    @media screen and (min-width: 375px){
+    @media screen and (min-width: 360px){
         @include flexible;
         padding: 23px 0;
         font-family: $policy;
@@ -92,7 +92,7 @@ body{
 
 /*IMAGE de la carte du menu*/
 .menu-image{
-    @media screen and (min-width: 375px){
+    @media screen and (min-width: 360px){
         img{
             max-width: 100%;
         }
@@ -101,7 +101,7 @@ body{
 
 /*MENU de la carte*/
 .card{
-    @media screen and (min-width: 375px){
+    @media screen and (min-width: 360px){
         position: relative;
         z-index: 1;
         bottom: 50px;
@@ -111,7 +111,7 @@ body{
     }
 
     .card-title{
-        font-size: .9em;
+        font-size: .8em;
     }
 
     .card-title-icon{
@@ -126,7 +126,7 @@ body{
         margin: auto 0px;
         position: absolute;
         left: 84%;
-        top: 3%
+        // top: 3%
     }
     
     .card-icon:active .heart-full{
@@ -194,13 +194,13 @@ body{
     .card-name{
         grid-area: nom;
         padding: 10px 10px 0 10px;
-        font-size: 18px;
+        font-size: 17px;
         
     }
     .card-description{
         grid-area: description;
         padding: 10px 0px 10px 10px;
-        font-size: 15px;
+        font-size: 14px;
         
     }
     .card-name, .card-description{
@@ -240,7 +240,7 @@ body{
     }
 }
 
-@media screen and (min-width: 760px){
+@media screen and (min-width: 600px){
     .menu-image img{
         width: 100%;
         height: 500px;

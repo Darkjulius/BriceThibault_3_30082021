@@ -10,7 +10,7 @@ body {
 }
 
 /*FOOTER de toutes les pages*/
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 360px) {
   .footer {
     background-color: #353535;
     color: #fff;
@@ -71,7 +71,7 @@ body {
 }
 
 /* HEADER des pages menu*/
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 360px) {
   .header {
     display: flex;
     flex-direction: column;
@@ -96,14 +96,14 @@ body {
 }
 
 /*IMAGE de la carte du menu*/
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 360px) {
   .menu-image img {
     max-width: 100%;
   }
 }
 
 /*MENU de la carte*/
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 360px) {
   .card {
     position: relative;
     z-index: 1;
@@ -114,7 +114,7 @@ body {
   }
 }
 .card .card-title {
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 .card .card-title-icon {
   margin: 0 14px;
@@ -127,7 +127,6 @@ body {
   margin: auto 0px;
   position: absolute;
   left: 84%;
-  top: 3%;
 }
 .card .card-icon:active .heart-full {
   /*Animation replissage du coeur au clic + mixin*/
@@ -210,12 +209,12 @@ body {
 .card .card-name {
   grid-area: nom;
   padding: 10px 10px 0 10px;
-  font-size: 18px;
+  font-size: 17px;
 }
 .card .card-description {
   grid-area: description;
   padding: 10px 0px 10px 10px;
-  font-size: 15px;
+  font-size: 14px;
 }
 .card .card-name, .card .card-description {
   /*Lors de la sélection d'une entrée, un plat ou un dessert. Un système de coche apparait qui peut écraser un bout ou du texte.
@@ -277,7 +276,7 @@ body {
   background: linear-gradient(0deg, #9356cd, #ff79da);
 }
 
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 600px) {
   .menu-image img {
     width: 100%;
     height: 500px;
@@ -335,7 +334,7 @@ body {
   }
 }
 /* HEADER DE LA PAGE index.html */
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 360px) {
   .header-index {
     background-color: #fff;
     box-shadow: 0 0 15px rgb 0 0 0/100%;
@@ -444,7 +443,7 @@ body {
 }
 
 /* SECTION LOCALISATION de la page index.html */
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 360px) {
   .localisation {
     display: flex;
     flex-direction: column;
@@ -474,7 +473,7 @@ body {
 }
 
 /*SECTION RESERVATION de la page index.html*/
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 360px) {
   .booking {
     display: flex;
     flex-direction: column;
@@ -517,9 +516,10 @@ body {
 }
 
 /*SECTION FONCTIONNEMENT de la page index.html*/
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 360px) {
   .operations {
     margin: 0 20px 38px 20px;
+    background-color: #fff;
   }
   .operations .operation-title {
     padding: 51px 0 34px 0;
@@ -619,7 +619,7 @@ body {
   }
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 360px) {
   .restaurants {
     background-color: #f6f6f6;
     padding: 59px 0 44px 0;
