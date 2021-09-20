@@ -145,7 +145,7 @@ body{
 
     .cards-menu{
         display: grid;
-        grid-template-rows: repeat(3, 1fr);
+        // grid-template-rows: repeat(3, 1fr);
     }
         &.cards-entrees{
             grid-area: entrees;

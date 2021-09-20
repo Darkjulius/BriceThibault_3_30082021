@@ -149,7 +149,6 @@ body {
 }
 .card .cards-menu {
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
 }
 .card.cards-entrees {
   grid-area: entrees;
@@ -654,7 +653,7 @@ body {
     font-weight: bold;
     padding: 5px;
     border-radius: 3px;
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
   .restaurants .restaurant-card-lien {
     text-decoration: none;

@@ -1,5 +1,5 @@
 /* HEADER DE LA PAGE index.html */
-.header-index{
+ .header-index{
     @media screen and (min-width: 375px){
         background-color: $color;
         box-shadow: 0 0 15px rgb (0 0 0 / 100%);
@@ -80,25 +80,25 @@
         @include flexible;
         background-color: #eaeaea;
         opacity: 0.8;
-    }
-    .localisation-choix{
-        display: $display;
-        justify-content: space-between;
-        align-items: $align;
-        width: 160px;
-        padding: 16px 0;
-    }
-    input[type=text]{
-        width: 100%;
-        background-color: transparent;
-        border: none;
-        text-align: $align;
-        font-size: 1em;
-        &::placeholder{
-            color: #000;
-            opacity: 1;
         }
-    }
+        .localisation-choix{
+            display: $display;
+            justify-content: space-between;
+            align-items: $align;
+            width: 160px;
+            padding: 16px 0;
+        }
+        input[type=text]{
+            width: 100%;
+            background-color: transparent;
+            border: none;
+            text-align: $align;
+            font-size: 1em;
+            &::placeholder{
+                color: #000;
+                opacity: 1;
+            }
+        }  
 }
 
 /*SECTION RESERVATION de la page index.html*/
@@ -135,6 +135,7 @@
 .operations{
     @media screen and (min-width: 375px){
         margin: 0 20px 38px 20px;
+        background-color: $color;
 
         .operation-title{
             padding: 51px 0 34px 0;
