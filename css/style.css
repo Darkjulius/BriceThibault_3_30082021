@@ -276,7 +276,7 @@ body {
   background: linear-gradient(0deg, #9356cd, #ff79da);
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 710px) {
   .menu-image img {
     width: 100%;
     height: 500px;
