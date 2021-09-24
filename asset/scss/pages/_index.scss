@@ -2,7 +2,7 @@
  .header-index{
     @media screen and (min-width: 360px){
         background-color: $color;
-        box-shadow: 0 0 15px rgb (0 0 0 / 100%);
+        box-shadow: 0 0 15px rgb(0 0 0 / 100%);
         @include flexible;
 
         .header-logo{
