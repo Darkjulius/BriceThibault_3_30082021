@@ -7,7 +7,7 @@ body{
 
 /*FOOTER de toutes les pages*/
 .footer{
-    @media screen and (min-width: 360px){
+    @media screen and (min-width: 320px){
      background-color: #353535;
      color: $color;
         .footer-infos{
@@ -21,6 +21,7 @@ body{
         .footer-menu li{
             list-style: none;
             padding-bottom: 9px;
+            font-size: 14px;
         }
         .footer-menu li a {
             color: $color;
@@ -33,6 +34,13 @@ body{
             & i{
                 font-size: 11px;
             }
+        }
+    }
+}
+.footer{
+    @media screen and (min-width: 360px){
+        .footer-menu li{
+            font-size: 16px;
         }
     }
 }
@@ -70,7 +78,7 @@ body{
 
 /* HEADER des pages menu*/
 .header{
-    @media screen and (min-width: 360px){
+    @media screen and (min-width: 320px){
         @include flexible;
         padding: 23px 0;
         font-family: $policy;
@@ -92,7 +100,7 @@ body{
 
 /*IMAGE de la carte du menu*/
 .menu-image{
-    @media screen and (min-width: 360px){
+    @media screen and (min-width: 320px){
         img{
             max-width: 100%;
         }
@@ -101,7 +109,7 @@ body{
 
 /*MENU de la carte*/
 .card{
-    @media screen and (min-width: 360px){
+    @media screen and (min-width: 320px){
         position: relative;
         z-index: 1;
         bottom: 50px;
@@ -111,7 +119,7 @@ body{
     }
 
     .card-title{
-        font-size: .8em;
+        font-size: .75em;
     }
 
     .card-title-icon{
@@ -125,7 +133,7 @@ body{
         font-size: 1.5em;
         margin: auto 0px;
         position: absolute;
-        left: 84%;
+        left: 80%;
         // top: 3%
     }
     
@@ -194,13 +202,13 @@ body{
     .card-name{
         grid-area: nom;
         padding: 10px 10px 0 10px;
-        font-size: 17px;
+        font-size: 15px;
         
     }
     .card-description{
         grid-area: description;
         padding: 10px 0px 10px 10px;
-        font-size: 14px;
+        font-size: 12px;
         
     }
     .card-name, .card-description{
@@ -211,7 +219,7 @@ body{
     .card-price{
         grid-area: prix;
         padding-right: 23px;
-        font-size: 15px;
+        font-size: 12px;
     }
 
     .card-check{
@@ -234,58 +242,87 @@ body{
         justify-content: center;
         & .command{
             @include commande;
-            font-size: 1em;
+            font-size: .8em;
             background: linear-gradient(0deg, $color-primary, $color-secondary);
         }
     }
 }
-
-@media screen and (min-width: 710px){
-    .menu-image img{
-        width: 100%;
-        height: 500px;
-        object-fit: cover;
-    }
-
-    .card-title-icon{
-        justify-content: center;
-    }
-    .card-icon{
-        position: unset !important;
-        padding-left: 30px;
-    }
-    .cards-menu{
-        // grid-template-rows: repeat(2, 1fr) !important;
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .cards-title h2{
-        text-align: center;
-    }
-    .card .cards-entrees-title-trait{
-        width: 95% !important;
-    }
-    .command{
-        margin-top: 45px !important;
+.card{
+    @media screen and (min-width: 360px){
+        .card-title{
+            font-size: .8em;
+        }
+        .card-icon{
+            left: 84%;
+        }
+        .card-name{
+            font-size: 17px;
+        }
+        .card-description{
+            font-size: 14px;
+        }
+        .card-price{
+            font-size: 15px;
+        }
+        .command{
+            font-size: 1em !important;
+        }
+        
     }
 }
-@media screen and (min-width: 1140px){
-    .menu-image img{
-        width: 100%;
-        height: 500px;
-        object-fit: cover;
-    }
 
-    .cards-menu{
-       display: $display !important;
-       justify-content: space-around;
-    }
-    .cards-entrees, .cards-plats, .cards-desserts{
-        width: 33%;
-    }
-    .card .cards-entrees-title-trait{
-        width: 94% !important;
-    }
-    .command{
-        margin-top: 50px !important;
+.card{
+    @media screen and (min-width: 710px){
+        .menu-image img{
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+    
+        .card-title-icon{
+            justify-content: center;
+        }
+        .card-icon{
+            position: unset !important;
+            padding-left: 30px;
+        }
+        .cards-menu{
+            // grid-template-rows: repeat(2, 1fr) !important;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .cards-title h2{
+            text-align: center;
+        }
+        .card .cards-entrees-title-trait{
+            width: 95% !important;
+        }
+        .command{
+            margin-top: 45px !important;
+        }
     }
 }
+
+.card{
+    @media screen and (min-width: 1140px){
+        .menu-image img{
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+    
+        .cards-menu{
+           display: $display !important;
+           justify-content: space-around;
+        }
+        .cards-entrees, .cards-plats, .cards-desserts{
+            width: 33%;
+        }
+        .card .cards-entrees-title-trait{
+            width: 94% !important;
+        }
+        .command{
+            margin-top: 50px !important;
+        }
+    }
+}
+

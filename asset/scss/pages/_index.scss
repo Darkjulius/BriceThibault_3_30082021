@@ -1,6 +1,6 @@
 /* HEADER DE LA PAGE index.html */
  .header-index{
-    @media screen and (min-width: 360px){
+    @media screen and (min-width: 320px){
         background-color: $color;
         box-shadow: 0 0 15px rgb(0 0 0 / 100%);
         @include flexible;
@@ -76,7 +76,7 @@
 
 /* SECTION LOCALISATION de la page index.html */
 .localisation{
-    @media screen and (min-width: 360px){
+    @media screen and (min-width: 320px){
         @include flexible;
         background-color: #eaeaea;
         opacity: 0.8;
@@ -103,16 +103,18 @@
 
 /*SECTION RESERVATION de la page index.html*/
 .booking{
-    @media screen and (min-width: 360px){
+    @media screen and (min-width: 320px){
         @include flexible;
         background-color: #f6f6f6;
 
         .booking-title{
-            width: 70%;
+            font-size: 16px;
+            width: 80%;
             text-align: $align;
             padding-top: 40px;
         }
         .booking-description{
+            font-size: 14px;
             width: 80%;
             text-align: $align;
             padding-top: 20px;
@@ -130,14 +132,26 @@
             }
     }
 }
+.booking{
+    @media screen and (min-width: 360px){
+        .booking-title{
+            width: 70%;
+        }
+        .booking-description{
+            font-size: 16px;
+            width: 80%;
+        }
+    }
+}
 
 /*SECTION FONCTIONNEMENT de la page index.html*/
 .operations{
-    @media screen and (min-width: 360px){
+    @media screen and (min-width: 320px){
         padding: 0 20px 38px 20px;
         background-color: $color;
 
         .operation-title{
+            font-size: 14px;
             padding: 51px 0 34px 0;
         }
         .operation-position{
@@ -178,7 +192,21 @@
                 position: absolute;
                 left: 20%;
                 font-weight: 600;
+                font-size: 14px;
             }
+        }
+    }
+}
+.operations{
+    @media screen and (min-width: 360px) {
+        .operation-title{
+            font-size: 16px;
+        }
+        .operation-text{
+            font-size: 16px !important;
+        }
+        .operation-number{
+            font-size: 16px !important;
         }
     }
 }
@@ -217,12 +245,13 @@
 
 //SECTION RESTAURANTS de la page index.html
 .restaurants{
-    @media screen and (min-width: 360px){
+    @media screen and (min-width: 320px){
         background-color: #f6f6f6;
         padding: 59px 0 44px 0;
         .restaurants-title{
             margin: 0px 20px;
             padding-bottom: 28px;
+            font-size: 14px;
         }
         .restaurants-cards{
             margin: 0px 20px;
@@ -251,6 +280,9 @@
             justify-content: space-between;
             margin: 10px 25px 10px 14px;
         }
+        .restaurantsd-title, .restaurant-location{
+            font-size: 14px;
+        }
         .restaurant-icon{
             display: $display;
             flex-direction: column;
@@ -275,6 +307,16 @@
             100% {
               transform: scale(1.1);
             }
+        }
+    }
+}
+.restaurants{
+    @media screen and (min-width: 360px){
+        .restaurants-title{
+            font-size: 16px;
+        }
+        .restaurantsd-title, .restaurant-location{
+            font-size: 16px;
         }
     }
 }
